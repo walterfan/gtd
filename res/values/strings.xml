@@ -1,0 +1,13 @@
+<resources>
+
+    <string name="app_name">GTD</string>
+
+    <string name="task_name">Task Name</string>
+    <string name="button_add">Add Task</string>
+    
+    <string name="title_activity_display_message">Task Added</string>
+    
+    <string name="action_settings">Task setting</string>
+    <string name="action_search">Task search</string>
+    
+</resources>
