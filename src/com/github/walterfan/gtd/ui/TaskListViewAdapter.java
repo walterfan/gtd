@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -20,7 +21,7 @@ public class TaskListViewAdapter extends BaseAdapter {
 	static class ViewHolder {
 		ImageView icon;
 		TextView title;
-		TextView text;
+		Spinner priority;
 		Button button;
 
 	}
@@ -66,7 +67,7 @@ public class TaskListViewAdapter extends BaseAdapter {
 			holder = new ViewHolder();
 			holder.icon = (ImageView)convertView.findViewById(_to[0]);
 			holder.title = (TextView)convertView.findViewById(_to[1]);
-			holder.text = (TextView)convertView.findViewById(_to[2]);
+			holder.priority = (Spinner)convertView.findViewById(_to[2]);
 			holder.button = (Button)convertView.findViewById(R.id.task_button);
 			
 			convertView.setTag(holder);
@@ -84,7 +85,7 @@ public class TaskListViewAdapter extends BaseAdapter {
 		
 		holder.icon.setImageResource((Integer)data0);
 		holder.title.setText(data1.toString());
-		holder.text.setText(data2.toString());
+		holder.priority.setSelection((Integer)data2);
 		
 		holder.button.setFocusable(false);
 		holder.button.setOnClickListener(new Button.OnClickListener() {

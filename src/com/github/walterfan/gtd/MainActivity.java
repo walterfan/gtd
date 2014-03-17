@@ -32,13 +32,13 @@ public class MainActivity extends Activity implements OnClickListener {
         testButton.setOnClickListener(this);
         
         View testSignIn = findViewById(R.id.btn_signin);
-        testButton.setOnClickListener(this);
+        testSignIn.setOnClickListener(this);
         
         View testAbout = findViewById(R.id.btn_about);
-        testButton.setOnClickListener(this);
+        testAbout.setOnClickListener(this);
         
         View testExit = findViewById(R.id.btn_exit);
-        testButton.setOnClickListener(this);
+        testExit.setOnClickListener(this);
     }
     
 	public void addTask(View view) {

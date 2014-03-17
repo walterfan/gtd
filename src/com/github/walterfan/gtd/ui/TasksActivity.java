@@ -3,82 +3,77 @@ package com.github.walterfan.gtd.ui;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import android.app.Activity;
-import android.content.Context;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.github.walterfan.gtd.R;
 
 public class TasksActivity extends Activity {
 
-	  @Override
-	  protected void onCreate(Bundle savedInstanceState) {
-	    super.onCreate(savedInstanceState);
-	    setContentView(R.layout.activity_tasks);
+	private List<Map<String, ?>> _tasks = new ArrayList<Map<String, ?>>(10);
+	//TODO: get task from sqlite
+	private void initTasks() {
+		Map<String, Object> map = new HashMap<String, Object>();
+		map.put("icon", R.drawable.ic_launcher);
+		map.put("title", "Practice English");
+		map.put("priority", 0);
+		_tasks.add(map);
+		
+		map = new HashMap<String, Object>();
+		map.put("icon", R.drawable.ic_launcher);
+		map.put("title", "Write Kanban Web APP");
+		map.put("priority", 2);
+		_tasks.add(map);
+		
+		map = new HashMap<String, Object>();
+		map.put("icon", R.drawable.ic_launcher);
+		map.put("title", "Write Kanban Server");
+		map.put("priority", 1);
+		_tasks.add(map);
+		
+		map = new HashMap<String, Object>();
+		map.put("icon", R.drawable.ic_launcher);
+		map.put("title", "Write RTC book");
+		map.put("priority", 1);
+		_tasks.add(map);
+		
+		map = new HashMap<String, Object>();
+		map.put("icon", R.drawable.ic_launcher);
+		map.put("title", "Write GTD app");
+		map.put("priority", 1);
+		_tasks.add(map);
+	}
+	
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_tasks);
 
-	    final ListView listview = (ListView) findViewById(R.id.task_list_view);
-	    String[] values = new String[] { "Android", "iPhone", "WindowsMobile",
-	        "Blackberry", "WebOS", "Ubuntu", "Windows7", "Max OS X",
-	        "Linux", "OS/2", "Ubuntu", "Windows7", "Max OS X", "Linux",
-	        "OS/2", "Ubuntu", "Windows7", "Max OS X", "Linux", "OS/2",
-	        "Android", "iPhone", "WindowsMobile" };
+		initTasks();
+		
+		ListView listView = (ListView)this.findViewById(R.id.task_list_view);
+		TaskListViewAdapter adapter = new TaskListViewAdapter(this, _tasks, 
+				R.layout.task_item, 
+				new String[]{"icon","title","priority"}, 
+				new int[]{R.id.task_icon, R.id.task_title, R.id.task_priority});
+		listView.setAdapter(adapter);
+		listView.setOnItemClickListener(new OnItemClickListener() {
 
-	    final ArrayList<String> list = new ArrayList<String>();
-	    for (int i = 0; i < values.length; ++i) {
-	      list.add(values[i]);
-	    }
-	    final StableArrayAdapter adapter = new StableArrayAdapter(this,
-	        android.R.layout.simple_list_item_1, list);
-	    listview.setAdapter(adapter);
+			@Override
+			public void onItemClick(AdapterView<?> parent, View view, int position,
+					long id) {
+				Toast.makeText(TasksActivity.this, "select position=" + position, Toast.LENGTH_SHORT).show();
+				
+			}
+			
+		});
+	}
 
-	    listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-
-	      @Override
-	      public void onItemClick(AdapterView<?> parent, final View view,
-	          int position, long id) {
-	        final String item = (String) parent.getItemAtPosition(position);
-	        view.animate().setDuration(2000).alpha(0)
-	            .withEndAction(new Runnable() {
-	              @Override
-	              public void run() {
-	                list.remove(item);
-	                adapter.notifyDataSetChanged();
-	                view.setAlpha(1);
-	              }
-	            });
-	      }
-
-	    });
-	  }
-
-	  private class StableArrayAdapter extends ArrayAdapter<String> {
-
-	    HashMap<String, Integer> mIdMap = new HashMap<String, Integer>();
-
-	    public StableArrayAdapter(Context context, int textViewResourceId,
-	        List<String> objects) {
-	      super(context, textViewResourceId, objects);
-	      for (int i = 0; i < objects.size(); ++i) {
-	        mIdMap.put(objects.get(i), i);
-	      }
-	    }
-
-	    @Override
-	    public long getItemId(int position) {
-	      String item = getItem(position);
-	      return mIdMap.get(item);
-	    }
-
-	    @Override
-	    public boolean hasStableIds() {
-	      return true;
-	    }
-
-	  }
-
-	} 
+}

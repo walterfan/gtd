@@ -8,6 +8,9 @@
 package com.github.walterfan.gtd;
 
 public final class R {
+    public static final class array {
+        public static final int priorities=0x7f040000;
+    }
     public static final class attr {
     }
     public static final class drawable {
@@ -15,22 +18,22 @@ public final class R {
         public static final int ic_launcher=0x7f020001;
     }
     public static final class id {
-        public static final int action_search=0x7f07000e;
-        public static final int action_settings=0x7f07000f;
-        public static final int btn_about=0x7f070006;
-        public static final int btn_exit=0x7f070007;
-        public static final int btn_signin=0x7f070005;
-        public static final int btn_test=0x7f070004;
-        public static final int main_action_panel=0x7f070003;
-        public static final int task_action_panel=0x7f070002;
-        public static final int task_add=0x7f070001;
-        public static final int task_button=0x7f07000d;
-        public static final int task_icon=0x7f07000a;
-        public static final int task_list=0x7f070009;
-        public static final int task_list_view=0x7f070008;
-        public static final int task_name=0x7f070000;
-        public static final int task_text=0x7f07000c;
-        public static final int task_title=0x7f07000b;
+        public static final int action_search=0x7f08000e;
+        public static final int action_settings=0x7f08000f;
+        public static final int btn_about=0x7f080006;
+        public static final int btn_exit=0x7f080007;
+        public static final int btn_signin=0x7f080005;
+        public static final int btn_test=0x7f080004;
+        public static final int main_action_panel=0x7f080003;
+        public static final int task_action_panel=0x7f080002;
+        public static final int task_add=0x7f080001;
+        public static final int task_button=0x7f08000d;
+        public static final int task_icon=0x7f08000a;
+        public static final int task_list=0x7f080009;
+        public static final int task_list_view=0x7f080008;
+        public static final int task_name=0x7f080000;
+        public static final int task_priority=0x7f08000c;
+        public static final int task_title=0x7f08000b;
     }
     public static final class layout {
         public static final int activity_display_message=0x7f030000;
@@ -40,23 +43,26 @@ public final class R {
         public static final int task_item=0x7f030004;
     }
     public static final class menu {
-        public static final int main_activity_actions=0x7f060000;
+        public static final int main_activity_actions=0x7f070000;
     }
     public static final class string {
-        public static final int action_search=0x7f04000d;
-        public static final int action_settings=0x7f04000c;
-        public static final int app_name=0x7f040000;
-        public static final int button_about=0x7f040006;
-        public static final int button_add=0x7f040002;
-        public static final int button_del=0x7f040003;
-        public static final int button_edit=0x7f040004;
-        public static final int button_exit=0x7f040007;
-        public static final int button_signin=0x7f040008;
-        public static final int button_signup=0x7f040009;
-        public static final int button_test=0x7f040005;
-        public static final int task_name=0x7f040001;
-        public static final int title_activity_display_message=0x7f04000a;
-        public static final int title_activity_tasks=0x7f04000b;
+        public static final int action_search=0x7f050010;
+        public static final int action_settings=0x7f05000f;
+        public static final int app_name=0x7f050000;
+        public static final int button_about=0x7f050006;
+        public static final int button_add=0x7f050002;
+        public static final int button_del=0x7f050003;
+        public static final int button_edit=0x7f050004;
+        public static final int button_exit=0x7f050007;
+        public static final int button_signin=0x7f050008;
+        public static final int button_signup=0x7f050009;
+        public static final int button_test=0x7f050005;
+        public static final int task_action=0x7f05000e;
+        public static final int task_name=0x7f050001;
+        public static final int task_priority=0x7f05000d;
+        public static final int title_activity_display_message=0x7f05000a;
+        public static final int title_activity_tasks=0x7f05000b;
+        public static final int title_task=0x7f05000c;
     }
     public static final class style {
         /** 
@@ -80,13 +86,13 @@ public final class R {
     
  API 14 theme customizations can go here. 
          */
-        public static final int AppBaseTheme=0x7f050000;
+        public static final int AppBaseTheme=0x7f060000;
         /**  Application theme. 
  All customizations that are NOT specific to a particular API-level can go here. 
          */
-        public static final int AppTheme=0x7f050001;
+        public static final int AppTheme=0x7f060001;
         /**  the theme applied to the application or activity 
          */
-        public static final int CustomActionBarTheme=0x7f050002;
+        public static final int CustomActionBarTheme=0x7f060002;
     }
 }
