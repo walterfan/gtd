@@ -9,9 +9,14 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.EditText;
+import android.widget.Toast;
 
-public class MainActivity extends Activity {
+import com.github.walterfan.gtd.ui.DisplayMessageActivity;
+import com.github.walterfan.gtd.ui.TasksActivity;
+
+public class MainActivity extends Activity implements OnClickListener {
 	public final static String EXTRA_MESSAGE = "com.github.walterfan.gtd.MESSAGE";
 	
 	private static final String TAG = "GTD.MainActivity";
@@ -22,6 +27,18 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
         Log.d(TAG, "onCreate...");
    
+        
+        View testButton = findViewById(R.id.btn_test);
+        testButton.setOnClickListener(this);
+        
+        View testSignIn = findViewById(R.id.btn_signin);
+        testButton.setOnClickListener(this);
+        
+        View testAbout = findViewById(R.id.btn_about);
+        testButton.setOnClickListener(this);
+        
+        View testExit = findViewById(R.id.btn_exit);
+        testButton.setOnClickListener(this);
     }
     
 	public void addTask(View view) {
@@ -61,6 +78,21 @@ public class MainActivity extends Activity {
 	
 	private void openSettings() {
 		Log.d(TAG, "openSettings...");
+		
+	}
+
+	@Override
+	public void onClick(View view) {
+		switch(view.getId())
+		{
+		case R.id.btn_test:
+			Intent i = new Intent(this, TasksActivity.class);
+			startActivity(i);
+			break;
+		default:
+			Toast.makeText(this, "TBD...Walter Fan", Toast.LENGTH_LONG).show();
+		
+		}
 		
 	}
 }

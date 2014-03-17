@@ -4,7 +4,7 @@
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="11"
+        android:minSdkVersion="12"
         android:targetSdkVersion="18" />
 
     <application
@@ -21,9 +21,18 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.github.walterfan.gtd.DisplayMessageActivity"
+            android:name="com.github.walterfan.gtd.ui.DisplayMessageActivity"
             android:label="@string/title_activity_display_message"
             android:parentActivityName="com.github.walterfan.gtd.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.github.walterfan.gtd.MainActivity" />
+        </activity>
+        
+         <activity
+            android:name="com.github.walterfan.gtd.ui.TasksActivity"
+            android:label="@string/title_activity_tasks"
+            android:parentActivityName="com.github.walterfan.gtd.ui.MainActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.github.walterfan.gtd.MainActivity" />

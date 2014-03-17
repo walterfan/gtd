@@ -1,4 +1,6 @@
-package com.github.walterfan.gtd;
+package com.github.walterfan.gtd.ui;
+
+import com.github.walterfan.gtd.MainActivity;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;

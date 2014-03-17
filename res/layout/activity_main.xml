@@ -2,7 +2,14 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+<LinearLayout
+    android:id="@+id/task_action_panel"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="horizontal" >
+    
     <EditText android:id="@+id/task_name" 
         android:layout_weight="1"
         android:layout_width="0dp"
@@ -15,4 +22,44 @@
         android:hint="@string/button_add"
         android:onClick="addTask"
         />
+</LinearLayout>
+
+<LinearLayout
+    android:id="@+id/main_action_panel"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:layout_gravity="bottom"
+    android:gravity="bottom|center_horizontal"
+    android:orientation="horizontal"
+    android:showDividers="end" >
+    
+    <Button  android:id="@+id/btn_test" 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/button_test" />
+    
+    <Button  android:id="@+id/btn_signin" 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/button_signin" />
+<!--     
+    <Button  android:id="@+id/btn_signup" 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/button_signup" /> -->
+    
+    <Button  android:id="@+id/btn_about" 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/button_about" />
+    
+    <Button  android:id="@+id/btn_exit" 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/button_exit" />
+    
+    
+    
+</LinearLayout>
+
 </LinearLayout>

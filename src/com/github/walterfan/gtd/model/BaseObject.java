@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.github.walterfan.gtd;
+package com.github.walterfan.gtd.model;
 
 /**
  * Base class for Model objects. Inherited class should implement toString(), 
