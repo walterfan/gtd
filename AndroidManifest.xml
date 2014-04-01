@@ -37,6 +37,12 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.github.walterfan.gtd.MainActivity" />
         </activity>
+        <service android:name="com.github.walterfan.gtd.service.DataSyncService" 
+            android:process=":remote">
+            <intent-filter>
+                <action android:name="com.android.myAction"/>
+            </intent-filter>
+        </service>
     </application>
 
 </manifest>

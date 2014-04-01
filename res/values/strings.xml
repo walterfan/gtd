@@ -16,9 +16,23 @@
     <string name="title_activity_display_message">Task Added</string>
     <string name="title_activity_tasks">Tasks</string>
     <string name="title_task">task</string>
+    
+    <string name="task_icon">task</string>
     <string name="task_priority">task priority</string>
     <string name="task_action">Edit</string>
+    
     <string name="action_settings">Task setting</string>
     <string name="action_search">Task search</string>
+    
+    <string name="action_start_sync">Start Data Sync</string>
+    <string name="action_stop_sync">Stop Data Sync</string>
+    
+    <string name="data_sync_service_started">Data sync service started</string>
+    <string name="send">Send</string>
+    <string name="stop">Stop</string>
+    <string name="register">Register</string>
+    
+    
+    
     
 </resources>

@@ -18,36 +18,44 @@ public final class R {
         public static final int ic_launcher=0x7f020001;
     }
     public static final class id {
-        public static final int action_search=0x7f08000e;
-        public static final int action_settings=0x7f08000f;
+        public static final int action_search=0x7f080011;
+        public static final int action_settings=0x7f080012;
+        public static final int action_start_sync=0x7f080013;
+        public static final int action_stop_sync=0x7f080014;
         public static final int btn_about=0x7f080006;
         public static final int btn_exit=0x7f080007;
         public static final int btn_signin=0x7f080005;
         public static final int btn_test=0x7f080004;
         public static final int main_action_panel=0x7f080003;
+        public static final int register_button=0x7f08000a;
+        public static final int send_button=0x7f080009;
+        public static final int stop_button=0x7f08000b;
         public static final int task_action_panel=0x7f080002;
         public static final int task_add=0x7f080001;
-        public static final int task_button=0x7f08000d;
-        public static final int task_icon=0x7f08000a;
-        public static final int task_list=0x7f080009;
+        public static final int task_button=0x7f080010;
+        public static final int task_icon=0x7f08000d;
+        public static final int task_list=0x7f08000c;
         public static final int task_list_view=0x7f080008;
         public static final int task_name=0x7f080000;
-        public static final int task_priority=0x7f08000c;
-        public static final int task_title=0x7f08000b;
+        public static final int task_priority=0x7f08000f;
+        public static final int task_title=0x7f08000e;
     }
     public static final class layout {
         public static final int activity_display_message=0x7f030000;
         public static final int activity_main=0x7f030001;
         public static final int activity_tasks=0x7f030002;
-        public static final int task_fragment=0x7f030003;
-        public static final int task_item=0x7f030004;
+        public static final int task_broadcast=0x7f030003;
+        public static final int task_fragment=0x7f030004;
+        public static final int task_item=0x7f030005;
     }
     public static final class menu {
         public static final int main_activity_actions=0x7f070000;
     }
     public static final class string {
-        public static final int action_search=0x7f050010;
-        public static final int action_settings=0x7f05000f;
+        public static final int action_search=0x7f050011;
+        public static final int action_settings=0x7f050010;
+        public static final int action_start_sync=0x7f050012;
+        public static final int action_stop_sync=0x7f050013;
         public static final int app_name=0x7f050000;
         public static final int button_about=0x7f050006;
         public static final int button_add=0x7f050002;
@@ -57,9 +65,14 @@ public final class R {
         public static final int button_signin=0x7f050008;
         public static final int button_signup=0x7f050009;
         public static final int button_test=0x7f050005;
-        public static final int task_action=0x7f05000e;
+        public static final int data_sync_service_started=0x7f050014;
+        public static final int register=0x7f050017;
+        public static final int send=0x7f050015;
+        public static final int stop=0x7f050016;
+        public static final int task_action=0x7f05000f;
+        public static final int task_icon=0x7f05000d;
         public static final int task_name=0x7f050001;
-        public static final int task_priority=0x7f05000d;
+        public static final int task_priority=0x7f05000e;
         public static final int title_activity_display_message=0x7f05000a;
         public static final int title_activity_tasks=0x7f05000b;
         public static final int title_task=0x7f05000c;

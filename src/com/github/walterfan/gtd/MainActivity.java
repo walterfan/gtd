@@ -13,6 +13,7 @@ import android.view.View.OnClickListener;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.github.walterfan.gtd.service.DataSyncService;
 import com.github.walterfan.gtd.ui.DisplayMessageActivity;
 import com.github.walterfan.gtd.ui.TasksActivity;
 
@@ -67,20 +68,41 @@ public class MainActivity extends Activity implements OnClickListener {
 	        case R.id.action_settings:
 	            openSettings();
 	            return true;
+	        case R.id.action_start_sync:
+	            startService();
+	            return true;
+	        case R.id.action_stop_sync:
+	        	stopService();
+	            return true;    
+	            
 	        default:
 	            return super.onOptionsItemSelected(item);
 	    }
 	}
 	
 	private void openSearch() {
-		Log.d(TAG, "openSearch...");
+		Log.d(TAG, "--openSearch...");
 	}
 	
 	private void openSettings() {
-		Log.d(TAG, "openSettings...");
+		Log.d(TAG, "--openSettings...");
 		
 	}
 
+	private void startService() {
+		Log.d(TAG, "--startService--");
+		Intent intent = new Intent(this, DataSyncService.class);
+		startService(intent);
+		Toast.makeText(this, "started service", Toast.LENGTH_SHORT).show();
+	}
+	
+	private void stopService() {
+		Log.d(TAG, "--stopService--");
+		Intent intent = new Intent(this, DataSyncService.class);
+		stopService(intent);
+		Toast.makeText(this, "stopped service", Toast.LENGTH_SHORT).show();
+	}
+	
 	@Override
 	public void onClick(View view) {
 		switch(view.getId())
