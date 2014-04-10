@@ -43,6 +43,9 @@
                 <action android:name="com.android.myAction"/>
             </intent-filter>
         </service>
+        <activity android:theme="@style/AppTheme" android:name=".test.TestActivity"></activity>
+        <activity android:theme="@style/AppTheme" android:name=".test.MediaPlayerTest"></activity>
+        <activity android:theme="@style/AppTheme" android:name=".test.SoundPoolTest"></activity>
     </application>
 
 </manifest>

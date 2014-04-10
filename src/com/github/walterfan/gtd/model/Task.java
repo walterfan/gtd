@@ -13,6 +13,15 @@ public class Task extends BaseObject {
     public final static int TASKTYPE_ONSCHEDULE = 2;
     
     public final static int TASKTYPE_WAITOTHERS = 3;   
+
+    
+    public enum Priority {
+    	IMPORTANT_URGENT,
+    	IMPORTANT_NOT_URGENT,
+    	NOT_IMPORTANT_URGENT,
+    	NOT_IMPORTANT_NOT_URGENT
+    			
+    }
     
     //-----------------------------------------------//
         

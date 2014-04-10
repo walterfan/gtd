@@ -14,8 +14,8 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.github.walterfan.gtd.service.DataSyncService;
+import com.github.walterfan.gtd.test.TestActivity;
 import com.github.walterfan.gtd.ui.DisplayMessageActivity;
-import com.github.walterfan.gtd.ui.TasksActivity;
 
 public class MainActivity extends Activity implements OnClickListener {
 	public final static String EXTRA_MESSAGE = "com.github.walterfan.gtd.MESSAGE";
@@ -108,8 +108,14 @@ public class MainActivity extends Activity implements OnClickListener {
 		switch(view.getId())
 		{
 		case R.id.btn_test:
-			Intent i = new Intent(this, TasksActivity.class);
+			Intent i = new Intent(this, TestActivity.class);
 			startActivity(i);
+			break;
+		case R.id.btn_about:
+			Toast.makeText(this, "Wrote by Walter Fan on 4/10/14", Toast.LENGTH_LONG).show();
+			break;
+		case R.id.btn_exit:
+			finish();
 			break;
 		default:
 			Toast.makeText(this, "TBD...Walter Fan", Toast.LENGTH_LONG).show();
