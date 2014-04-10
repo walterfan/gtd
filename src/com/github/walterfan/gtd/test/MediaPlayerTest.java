@@ -15,13 +15,13 @@ public class MediaPlayerTest extends Activity {
 	private static final String TAG = "GTD.MediaPlayerTest";
 	private MediaPlayer mediaPlayer;
 	private String fileName = "Rain.ogg";
-	
+	private TextView textView;
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		Log.d(TAG, "onCreate...");
 		
-		TextView textView = new TextView(this);
+		textView = new TextView(this);
 		setContentView(textView);
 		
 		setVolumeControlStream(AudioManager.STREAM_MUSIC);
@@ -46,9 +46,10 @@ public class MediaPlayerTest extends Activity {
 	@Override
 	protected void onResume() {
 		Log.d(TAG, "onResume...");
+		textView.setText("start to play ");
 		super.onResume();
 		if(null !=  mediaPlayer) {
-			mediaPlayer.reset();
+			//mediaPlayer.reset();
 			mediaPlayer.start();
 		}
 	}
@@ -56,6 +57,7 @@ public class MediaPlayerTest extends Activity {
 	@Override
 	protected void onPause() {
 		Log.d(TAG, "onPause...");
+		textView.setText("pause to play ");
 		super.onPause();
 		if(null !=  mediaPlayer) {
 			mediaPlayer.pause();
