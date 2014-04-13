@@ -46,6 +46,9 @@
         <activity android:theme="@style/AppTheme" android:name=".test.TestActivity"></activity>
         <activity android:theme="@style/AppTheme" android:name=".test.MediaPlayerTest"></activity>
         <activity android:theme="@style/AppTheme" android:name=".test.SoundPoolTest"></activity>
+        <activity android:theme="@style/AppTheme" android:name=".test.ShapeTest"></activity>
+        <activity android:theme="@style/AppTheme" android:name=".test.DialogTest"></activity>
+        <activity android:theme="@style/AppTheme" android:name=".LoginActivity"></activity>
     </application>
 
 </manifest>

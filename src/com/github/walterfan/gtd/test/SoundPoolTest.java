@@ -24,7 +24,7 @@ public class SoundPoolTest extends Activity implements OnTouchListener {
 	public boolean onTouch(View view, MotionEvent event) {
 		textView.setText("Play by touch " + event.getAction());
 		if(event.getAction() == MotionEvent.ACTION_DOWN) {
-			Log.d(TAG, "onTouch...ACTION_UP");
+			Log.d(TAG, "onTouch...ACTION_DOWN");
 			if(soundId != -1) {
 				soundPool.play(soundId,  1, 1, 0, 0, 1);
 			}

@@ -1,0 +1,9 @@
+<tasks>
+    <task>#ReadBook#Read POSA2</task>
+    <task>#ReadBook#Boost source anallysis book</task>
+    <task>#ReadBook#Linux server programming</task>
+    <task>#WriteBook#Build xxx application by open source</task>
+    <task>#WriteApp#Xxx web app</task>
+    <task>#WriteApp#Xxx server</task>
+    <task>#WriteApp#Xxx android app</task>
+</tasks>

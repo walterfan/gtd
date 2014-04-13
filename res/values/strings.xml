@@ -30,9 +30,20 @@
     <string name="data_sync_service_started">Data sync service started</string>
     <string name="send">Send</string>
     <string name="stop">Stop</string>
-    <string name="register">Register</string>
+    
+    <string name="dialog_prompt">Are you sure?</string>
+    <string name="dialog_ok">Okay</string>
+    <string name="dialog_cancel">Cancel</string>
     
     
     
+     <string name="hello">Hello</string>
+    <string name="login">Login</string>
+    <string name="filledTextView"> * </string>
+	<string name="register">Register</string>
+    <string name="strAccInputLabel">Username</string>
+    <string name="strPswInputLabel">Password</string>
+    <string name="strInputAccHint">input account</string>
+    <string name="strPswInputHint">input password</string>
     
 </resources>

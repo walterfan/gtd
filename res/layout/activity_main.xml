@@ -23,7 +23,11 @@
         android:onClick="addTask"
         />
 </LinearLayout>
-
+<ScrollView android:id="@+id/task_list_panel" 
+    android:layout_width="match_parent" android:layout_height="360dip" 
+    android:background="#99FFCC" android:scrollbars="vertical">
+    
+</ScrollView>
 <LinearLayout
     android:id="@+id/main_action_panel"
     android:layout_width="match_parent"

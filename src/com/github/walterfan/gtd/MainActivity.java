@@ -111,6 +111,10 @@ public class MainActivity extends Activity implements OnClickListener {
 			Intent i = new Intent(this, TestActivity.class);
 			startActivity(i);
 			break;
+		case R.id.btn_signin:
+			Intent j = new Intent(this, LoginActivity.class);
+			startActivity(j);
+			break;
 		case R.id.btn_about:
 			Toast.makeText(this, "Wrote by Walter Fan on 4/10/14", Toast.LENGTH_LONG).show();
 			break;
@@ -123,4 +127,19 @@ public class MainActivity extends Activity implements OnClickListener {
 		}
 		
 	}
+
+	@Override
+	protected void onPause() {
+		// TODO Auto-generated method stub
+		super.onPause();
+	}
+
+	@Override
+	protected void onResume() {
+	
+		super.onResume();
+		View view = this.findViewById(R.id.task_list_panel);
+	}
+	
+	
 }
