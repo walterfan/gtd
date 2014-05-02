@@ -11,7 +11,7 @@ finished?
     android:layout_height="?android:attr/listPreferredItemHeight"
     android:padding="6dip" >
 
-    <ImageView
+<!--     <ImageView
         android:id="@+id/task_icon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -22,13 +22,19 @@ finished?
         android:adjustViewBounds="true"
         android:maxWidth="50dip"
         android:maxHeight="50dip"
-        />
+        /> -->
+
+    <CheckBox android:id="@+id/task_isdone"         
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"/>
 
     <TextView
         android:id="@+id/task_title"
         android:layout_width="162sp"
         android:layout_height="wrap_content"
-        android:layout_toRightOf="@id/task_icon"
+        android:layout_toRightOf="@id/task_isdone"
         android:textSize="18sp"
         android:singleLine="true"
         android:text="@string/title_task"/>

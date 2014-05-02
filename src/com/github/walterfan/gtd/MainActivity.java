@@ -43,7 +43,7 @@ public class MainActivity extends Activity implements OnClickListener {
         Log.d(TAG, "onCreate...");
    
         Map<String, Object> map = new HashMap<String, Object>();
-		map.put("icon", R.drawable.ic_launcher);
+		map.put("isdone", false);
 		map.put("title", "Practice English");
 		map.put("priority", 0);
 		_tasks.add(map);
@@ -55,8 +55,8 @@ public class MainActivity extends Activity implements OnClickListener {
         sv.addView(_taskListView);
         _adapter = new TaskListViewAdapter(this, _tasks, 
 				R.layout.task_item, 
-				new String[]{"icon","title","priority"}, 
-				new int[]{R.id.task_icon, R.id.task_title, R.id.task_priority});
+				new String[]{"isdone","title","priority"}, 
+				new int[]{R.id.task_isdone, R.id.task_title, R.id.task_priority});
 		_taskListView.setAdapter(_adapter);
 		_taskListView.setOnItemClickListener(new OnItemClickListener() {
 
@@ -112,7 +112,7 @@ public class MainActivity extends Activity implements OnClickListener {
 			public void run() {
 				//_tasks.clear();//why clear?
 				Map<String, Object> map = new HashMap<String, Object>();
-				map.put("icon", R.drawable.ic_launcher);
+				map.put("isdone", false);
 				map.put("title", message);
 				map.put("priority", 0);
 				_tasks.add(map);

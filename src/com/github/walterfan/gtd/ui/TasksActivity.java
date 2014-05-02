@@ -62,7 +62,7 @@ public class TasksActivity extends Activity {
 		TaskListViewAdapter adapter = new TaskListViewAdapter(this, _tasks, 
 				R.layout.task_item, 
 				new String[]{"icon","title","priority"}, 
-				new int[]{R.id.task_icon, R.id.task_title, R.id.task_priority});
+				new int[]{R.id.task_isdone, R.id.task_title, R.id.task_priority});
 		listView.setAdapter(adapter);
 		listView.setOnItemClickListener(new OnItemClickListener() {
 

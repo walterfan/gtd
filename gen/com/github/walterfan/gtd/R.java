@@ -48,7 +48,7 @@ public final class R {
         public static final int task_action_panel=0x7f080009;
         public static final int task_add=0x7f080001;
         public static final int task_button=0x7f08001f;
-        public static final int task_icon=0x7f08001c;
+        public static final int task_isdone=0x7f08001c;
         public static final int task_list=0x7f08001b;
         public static final int task_list_panel=0x7f08000a;
         public static final int task_list_view=0x7f080010;

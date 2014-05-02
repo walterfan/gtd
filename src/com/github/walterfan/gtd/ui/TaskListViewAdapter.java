@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -19,7 +20,7 @@ import com.github.walterfan.gtd.R;
 public class TaskListViewAdapter extends BaseAdapter {
 
 	static class ViewHolder {
-		ImageView icon;
+		CheckBox isdone;
 		TextView title;
 		Spinner priority;
 		Button button;
@@ -69,7 +70,7 @@ public class TaskListViewAdapter extends BaseAdapter {
 		if(null == convertView) {
 			convertView = LayoutInflater.from(_context).inflate(_resource, parent, false);
 			holder = new ViewHolder();
-			holder.icon = (ImageView)convertView.findViewById(_to[0]);
+			holder.isdone = (CheckBox)convertView.findViewById(_to[0]);
 			holder.title = (TextView)convertView.findViewById(_to[1]);
 			holder.priority = (Spinner)convertView.findViewById(_to[2]);
 			holder.button = (Button)convertView.findViewById(R.id.task_button);
@@ -87,7 +88,7 @@ public class TaskListViewAdapter extends BaseAdapter {
 		final Object data1 = dataSet.get(_from[1]);
 		final Object data2 = dataSet.get(_from[2]);
 		
-		holder.icon.setImageResource((Integer)data0);
+		holder.isdone.setChecked((Boolean)data0);
 		holder.title.setText(data1.toString());
 		holder.priority.setSelection((Integer)data2);
 		
