@@ -43,6 +43,10 @@ public class TaskListViewAdapter extends BaseAdapter {
 		_to = to;
 	}
 	
+	public void setData(List<? extends Map<String, ?>> data){
+		this._data = data;
+	}
+	
 	@Override
 	public int getCount() {
 		return _data.size();

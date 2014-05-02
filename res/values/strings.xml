@@ -21,7 +21,7 @@
     <string name="task_priority">task priority</string>
     <string name="task_action">Edit</string>
     
-    <string name="action_settings">Task setting</string>
+    <string name="action_settings">setting</string>
     <string name="action_search">Task search</string>
     
     <string name="action_start_sync">Start Data Sync</string>

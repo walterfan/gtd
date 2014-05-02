@@ -1,6 +1,11 @@
 package com.github.walterfan.gtd;
 
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,17 +15,26 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.EditText;
+import android.widget.ListView;
+import android.widget.ScrollView;
 import android.widget.Toast;
 
 import com.github.walterfan.gtd.service.DataSyncService;
 import com.github.walterfan.gtd.test.TestActivity;
-import com.github.walterfan.gtd.ui.DisplayMessageActivity;
+import com.github.walterfan.gtd.ui.TaskListViewAdapter;
 
 public class MainActivity extends Activity implements OnClickListener {
 	public final static String EXTRA_MESSAGE = "com.github.walterfan.gtd.MESSAGE";
 	
-	private static final String TAG = "GTD.MainActivity";
+	private List<Map<String, ?>> _tasks = new ArrayList<Map<String, ?>>(10);
+	private TaskListViewAdapter _adapter;
+	private ListView _taskListView;
+	
+	private static final String TAG = "MainActivity";
 	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +42,35 @@ public class MainActivity extends Activity implements OnClickListener {
         setContentView(R.layout.activity_main);
         Log.d(TAG, "onCreate...");
    
+        Map<String, Object> map = new HashMap<String, Object>();
+		map.put("icon", R.drawable.ic_launcher);
+		map.put("title", "Practice English");
+		map.put("priority", 0);
+		_tasks.add(map);
+		
+        ViewGroup sv = (ViewGroup)findViewById(R.id.task_list_panel);
+        
+        _taskListView = new ListView(this);
+        _taskListView.setId(View.generateViewId());
+        sv.addView(_taskListView);
+        _adapter = new TaskListViewAdapter(this, _tasks, 
+				R.layout.task_item, 
+				new String[]{"icon","title","priority"}, 
+				new int[]{R.id.task_icon, R.id.task_title, R.id.task_priority});
+		_taskListView.setAdapter(_adapter);
+		_taskListView.setOnItemClickListener(new OnItemClickListener() {
+
+			@Override
+			public void onItemClick(AdapterView<?> parent, View view, int position,
+					long id) {
+				Toast.makeText(MainActivity.this, "select position=" + position, Toast.LENGTH_SHORT).show();
+				
+			}
+			
+		});
+		
+		View addTaskBtn = findViewById(R.id.task_add);
+		addTaskBtn.setOnClickListener(this);
         
         View testButton = findViewById(R.id.btn_test);
         testButton.setOnClickListener(this);
@@ -42,13 +85,47 @@ public class MainActivity extends Activity implements OnClickListener {
         testExit.setOnClickListener(this);
     }
     
-	public void addTask(View view) {
-		Intent intent = new Intent(this, DisplayMessageActivity.class);
+	public void addTask(final View view) {
+		//Intent intent = new Intent(this, DisplayMessageActivity.class);
+		if(_taskListView == null){
+			return;
+		}
 	    EditText editText = (EditText) findViewById(R.id.task_name);
-	    String message = editText.getText().toString();
-	    intent.putExtra(EXTRA_MESSAGE, message);
-	    startActivity(intent);
-	}
+	    final String message = editText.getText().toString();
+	    
+	    /*
+		
+	    Runnable action = new Runnable() {
+
+			@Override
+			public void run() {	
+				_adapter.notifyDataSetChanged();
+				Log.d(TAG, "add task and notified1:  "+message);				
+			}    	
+	    };
+	    
+	    Handler handler=new Handler();
+	    handler.postDelayed(action,1000);
+	    */
+		view.animate().setDuration(500).alpha(0).withEndAction(new Runnable() {
+			@Override
+			public void run() {
+				//_tasks.clear();//why clear?
+				Map<String, Object> map = new HashMap<String, Object>();
+				map.put("icon", R.drawable.ic_launcher);
+				map.put("title", message);
+				map.put("priority", 0);
+				_tasks.add(map);
+
+				//_adapter.setData(_tasks);
+				_adapter.notifyDataSetChanged();
+				Log.d(TAG, "add task " + message + ", count=" +_adapter.getCount());
+
+				view.setAlpha(1);
+			}
+		});
+  }
+
 	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
@@ -74,7 +151,6 @@ public class MainActivity extends Activity implements OnClickListener {
 	        case R.id.action_stop_sync:
 	        	stopService();
 	            return true;    
-	            
 	        default:
 	            return super.onOptionsItemSelected(item);
 	    }
@@ -121,6 +197,9 @@ public class MainActivity extends Activity implements OnClickListener {
 		case R.id.btn_exit:
 			finish();
 			break;
+        case R.id.task_add:
+        	addTask(view);
+        	break;
 		default:
 			Toast.makeText(this, "TBD...Walter Fan", Toast.LENGTH_LONG).show();
 		
