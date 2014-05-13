@@ -10,7 +10,7 @@ import android.database.sqlite.SQLiteDatabase.CursorFactory;
 import android.database.sqlite.SQLiteOpenHelper;
 
 /**
- * @author walter_2
+ * @author walter
  *
  */
 public class GtdDatabase extends SQLiteOpenHelper {
@@ -45,7 +45,7 @@ public class GtdDatabase extends SQLiteOpenHelper {
 	public GtdDatabase(Context context, String name, CursorFactory factory,
 			int version, DatabaseErrorHandler errorHandler) {
 		super(context, name, factory, version, errorHandler);
-		// TODO Auto-generated constructor stub
+		this.mContext = context;
 	}
 
 	/* (non-Javadoc)
