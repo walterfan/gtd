@@ -1,3 +1,6 @@
+# Introduction
+  * It's my first Android application for test and demo of what I learned and thought
+
 
 # Suppose
   * ADT(Android Development Tool) is installed in d:/opt/adt/sdk
@@ -23,8 +26,8 @@
 	alias ll='ls -l'
 	alias gtd='cd /home/walter/source/gtd' 
 
-
-#Reference
-
-* NDK: https://developer.android.com/tools/sdk/ndk/index.html
-* 
+# FAQ
+  * How to execute the executable ndk binary
+    * adb push libs/armeabi-v7a/waltertest /data/tmp/waltertest'
+    * adb shell chmod 777 /data/tmp/waltertest' 
+    * adb shell /data/tmp/waltertest 
