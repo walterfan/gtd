@@ -9,7 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.Button;
-import android.widget.ImageView;
+import android.widget.CheckBox;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -19,10 +19,10 @@ import com.github.walterfan.gtd.R;
 public class TaskListViewAdapter extends BaseAdapter {
 
 	static class ViewHolder {
-		ImageView icon;
-		TextView title;
-		Spinner priority;
-		Button button;
+		CheckBox chkFinish;
+		TextView txtTitle;
+		Spinner lstPriority;
+		Button btnEdit;
 
 	}
 
@@ -65,10 +65,10 @@ public class TaskListViewAdapter extends BaseAdapter {
 		if(null == convertView) {
 			convertView = LayoutInflater.from(_context).inflate(_resource, parent, false);
 			holder = new ViewHolder();
-			holder.icon = (ImageView)convertView.findViewById(_to[0]);
-			holder.title = (TextView)convertView.findViewById(_to[1]);
-			holder.priority = (Spinner)convertView.findViewById(_to[2]);
-			holder.button = (Button)convertView.findViewById(R.id.task_button);
+			holder.chkFinish = (CheckBox)convertView.findViewById(_to[0]);
+			holder.txtTitle = (TextView)convertView.findViewById(_to[1]);
+			holder.lstPriority = (Spinner)convertView.findViewById(_to[2]);
+			holder.btnEdit = (Button)convertView.findViewById(R.id.task_button);
 			
 			convertView.setTag(holder);
 				
@@ -83,12 +83,12 @@ public class TaskListViewAdapter extends BaseAdapter {
 		final Object data1 = dataSet.get(_from[1]);
 		final Object data2 = dataSet.get(_from[2]);
 		
-		holder.icon.setImageResource((Integer)data0);
-		holder.title.setText(data1.toString());
-		holder.priority.setSelection((Integer)data2);
+		//holder.btnEdit.setImageResource((Integer)data0);
+		holder.txtTitle.setText(data1.toString());
+		holder.lstPriority.setSelection((Integer)data2);
 		
-		holder.button.setFocusable(false);
-		holder.button.setOnClickListener(new Button.OnClickListener() {
+		holder.btnEdit.setFocusable(false);
+		holder.btnEdit.setOnClickListener(new Button.OnClickListener() {
 
 			@Override
 			public void onClick(View arg0) {
