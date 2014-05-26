@@ -1,0 +1,75 @@
+\hypertarget{classcom_1_1github_1_1walterfan_1_1gtd_1_1LoginActivity}{\section{com.\-github.\-walterfan.\-gtd.\-Login\-Activity Class Reference}
+\label{classcom_1_1github_1_1walterfan_1_1gtd_1_1LoginActivity}\index{com.\-github.\-walterfan.\-gtd.\-Login\-Activity@{com.\-github.\-walterfan.\-gtd.\-Login\-Activity}}
+}
+Inheritance diagram for com.\-github.\-walterfan.\-gtd.\-Login\-Activity\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classcom_1_1github_1_1walterfan_1_1gtd_1_1LoginActivity}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classcom_1_1github_1_1walterfan_1_1gtd_1_1LoginActivity_aa54e52f2826fb79e947a1c15439709ec}{on\-Create} (Bundle saved\-Instance\-State)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 10 of file Login\-Activity.\-java.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classcom_1_1github_1_1walterfan_1_1gtd_1_1LoginActivity_aa54e52f2826fb79e947a1c15439709ec}{\index{com\-::github\-::walterfan\-::gtd\-::\-Login\-Activity@{com\-::github\-::walterfan\-::gtd\-::\-Login\-Activity}!on\-Create@{on\-Create}}
+\index{on\-Create@{on\-Create}!com::github::walterfan::gtd::LoginActivity@{com\-::github\-::walterfan\-::gtd\-::\-Login\-Activity}}
+\subsubsection[{on\-Create}]{\setlength{\rightskip}{0pt plus 5cm}void com.\-github.\-walterfan.\-gtd.\-Login\-Activity.\-on\-Create (
+\begin{DoxyParamCaption}
+\item[{Bundle}]{saved\-Instance\-State}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classcom_1_1github_1_1walterfan_1_1gtd_1_1LoginActivity_aa54e52f2826fb79e947a1c15439709ec}
+Called when the activity is first created. 
+
+Definition at line 21 of file Login\-Activity.\-java.
+
+
+\begin{DoxyCode}
+21                                                     \{
+22         super.onCreate(savedInstanceState);
+23         
+24 
+25         setContentView(R.layout.activity\_login);
+26         
+27         userNameEditText = (EditText)this.findViewById(R.id.userNameEditText);
+28         passwordEditText = (EditText)this.findViewById(R.id.passwordEditText);
+29         
+30         loginButton = (Button)this.findViewById(R.id.loginButton);
+31         
+32         loginButton.setOnClickListener(\textcolor{keyword}{new} View.OnClickListener() \{
+33             
+34             \textcolor{keyword}{public} \textcolor{keywordtype}{void} onClick(View v) \{
+35                 String userName  = userNameEditText.getText().toString().trim();
+36                 String password  = passwordEditText.getText().toString().trim();
+37                 
+38                 \textcolor{keywordflow}{if}(D) Log.d(TAG, \textcolor{stringliteral}{"Username£º"}+userName);
+39                 \textcolor{keywordflow}{if}(D) Log.d(TAG, \textcolor{stringliteral}{"Password£º"}+password);
+40                 
+41                 
+42                 \textcolor{keywordflow}{if}(\textcolor{stringliteral}{"walter"}.equals(userName) && \textcolor{stringliteral}{"pass"}.equals(password))\{
+43                     
+44                     Toast.makeText(LoginActivity.this, \textcolor{stringliteral}{"Login successfully!"}, Toast.LENGTH\_SHORT).show();
+45                 \}\textcolor{keywordflow}{else}\{
+46                     Toast.makeText(LoginActivity.this, \textcolor{stringliteral}{"username or password error!"}, Toast.LENGTH\_SHORT).
+      show();
+47                 \}
+48             \}
+49         \});
+50         
+51     \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+/cygdrive/d/workspace/java/\-G\-T\-D/src/com/github/walterfan/gtd/Login\-Activity.\-java\end{DoxyCompactItemize}

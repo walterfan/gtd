@@ -1,0 +1,212 @@
+\hypertarget{classcom_1_1github_1_1walterfan_1_1gtd_1_1model_1_1BaseObject}{\section{com.\-github.\-walterfan.\-gtd.\-model.\-Base\-Object Class Reference}
+\label{classcom_1_1github_1_1walterfan_1_1gtd_1_1model_1_1BaseObject}\index{com.\-github.\-walterfan.\-gtd.\-model.\-Base\-Object@{com.\-github.\-walterfan.\-gtd.\-model.\-Base\-Object}}
+}
+Inheritance diagram for com.\-github.\-walterfan.\-gtd.\-model.\-Base\-Object\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.272727cm]{classcom_1_1github_1_1walterfan_1_1gtd_1_1model_1_1BaseObject}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classcom_1_1github_1_1walterfan_1_1gtd_1_1model_1_1BaseObject_af80a9f5d03ffbb1e2ad776b9d603401f}{boolean {\bfseries equals} (Object object)}\label{classcom_1_1github_1_1walterfan_1_1gtd_1_1model_1_1BaseObject_af80a9f5d03ffbb1e2ad776b9d603401f}
+
+\item 
+\hypertarget{classcom_1_1github_1_1walterfan_1_1gtd_1_1model_1_1BaseObject_a60edd102d3719adbe033d35402dc509c}{int {\bfseries hash\-Code} ()}\label{classcom_1_1github_1_1walterfan_1_1gtd_1_1model_1_1BaseObject_a60edd102d3719adbe033d35402dc509c}
+
+\item 
+\hypertarget{classcom_1_1github_1_1walterfan_1_1gtd_1_1model_1_1BaseObject_ab85b68e5efdce320dc5b1184d3d28d3c}{String {\bfseries to\-String} ()}\label{classcom_1_1github_1_1walterfan_1_1gtd_1_1model_1_1BaseObject_ab85b68e5efdce320dc5b1184d3d28d3c}
+
+\item 
+Object \hyperlink{classcom_1_1github_1_1walterfan_1_1gtd_1_1model_1_1BaseObject_aa9c242e5a1ff02058e26ddf277f56127}{get\-Field} (String str\-Field)  throws Illegal\-Access\-Exception,             Invocation\-Target\-Exception, No\-Such\-Method\-Exception 
+\item 
+Object \hyperlink{classcom_1_1github_1_1walterfan_1_1gtd_1_1model_1_1BaseObject_afa45970ded68ada4994d0a004c41275a}{invoke\-Method} (String str\-Method, Object...\-args)  throws Illegal\-Argument\-Exception, Illegal\-Access\-Exception,             Invocation\-Target\-Exception, Security\-Exception, No\-Such\-Method\-Exception 
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+String \hyperlink{classcom_1_1github_1_1walterfan_1_1gtd_1_1model_1_1BaseObject_afbdf03e5477a44c75e95e6cc46a98d76}{read\-String} (Object\-Input in, int len)  throws I\-O\-Exception 
+\item 
+void \hyperlink{classcom_1_1github_1_1walterfan_1_1gtd_1_1model_1_1BaseObject_aa6dbf926bf2dea61bc4ae295c00c8998}{write\-String} (Object\-Output buf, String str)  throws I\-O\-Exception 
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The Class \hyperlink{classcom_1_1github_1_1walterfan_1_1gtd_1_1model_1_1BaseObject}{Base\-Object}.
+
+\begin{DoxyAuthor}{Author}
+yafan 
+\end{DoxyAuthor}
+
+
+Definition at line 28 of file Base\-Object.\-java.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classcom_1_1github_1_1walterfan_1_1gtd_1_1model_1_1BaseObject_aa9c242e5a1ff02058e26ddf277f56127}{\index{com\-::github\-::walterfan\-::gtd\-::model\-::\-Base\-Object@{com\-::github\-::walterfan\-::gtd\-::model\-::\-Base\-Object}!get\-Field@{get\-Field}}
+\index{get\-Field@{get\-Field}!com::github::walterfan::gtd::model::BaseObject@{com\-::github\-::walterfan\-::gtd\-::model\-::\-Base\-Object}}
+\subsubsection[{get\-Field}]{\setlength{\rightskip}{0pt plus 5cm}Object com.\-github.\-walterfan.\-gtd.\-model.\-Base\-Object.\-get\-Field (
+\begin{DoxyParamCaption}
+\item[{String}]{str\-Field}
+\end{DoxyParamCaption}
+) throws Illegal\-Access\-Exception,             Invocation\-Target\-Exception, No\-Such\-Method\-Exception\hspace{0.3cm}{\ttfamily [inline]}}}\label{classcom_1_1github_1_1walterfan_1_1gtd_1_1model_1_1BaseObject_aa9c242e5a1ff02058e26ddf277f56127}
+Gets the field.
+
+
+\begin{DoxyParams}{Parameters}
+{\em str\-Field} & the str field \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the field 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Illegal\-Access\-Exception} & the illegal access exception \\
+\hline
+{\em Invocation\-Target\-Exception} & the invocation target exception \\
+\hline
+{\em No\-Such\-Method\-Exception} & the no such method exception \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 63 of file Base\-Object.\-java.
+
+
+\begin{DoxyCode}
+64                                                              \{
+65         \textcolor{keywordflow}{return} PropertyUtils.getProperty(\textcolor{keyword}{this}, strField);
+66     \}
+\end{DoxyCode}
+\hypertarget{classcom_1_1github_1_1walterfan_1_1gtd_1_1model_1_1BaseObject_afa45970ded68ada4994d0a004c41275a}{\index{com\-::github\-::walterfan\-::gtd\-::model\-::\-Base\-Object@{com\-::github\-::walterfan\-::gtd\-::model\-::\-Base\-Object}!invoke\-Method@{invoke\-Method}}
+\index{invoke\-Method@{invoke\-Method}!com::github::walterfan::gtd::model::BaseObject@{com\-::github\-::walterfan\-::gtd\-::model\-::\-Base\-Object}}
+\subsubsection[{invoke\-Method}]{\setlength{\rightskip}{0pt plus 5cm}Object com.\-github.\-walterfan.\-gtd.\-model.\-Base\-Object.\-invoke\-Method (
+\begin{DoxyParamCaption}
+\item[{String}]{str\-Method, }
+\item[{Object...}]{args}
+\end{DoxyParamCaption}
+) throws Illegal\-Argument\-Exception, Illegal\-Access\-Exception,             Invocation\-Target\-Exception, Security\-Exception, No\-Such\-Method\-Exception\hspace{0.3cm}{\ttfamily [inline]}}}\label{classcom_1_1github_1_1walterfan_1_1gtd_1_1model_1_1BaseObject_afa45970ded68ada4994d0a004c41275a}
+Invoke method.
+
+
+\begin{DoxyParams}{Parameters}
+{\em str\-Method} & the str method \\
+\hline
+{\em args} & the args \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the object 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Illegal\-Argument\-Exception} & the illegal argument exception \\
+\hline
+{\em Illegal\-Access\-Exception} & the illegal access exception \\
+\hline
+{\em Invocation\-Target\-Exception} & the invocation target exception \\
+\hline
+{\em Security\-Exception} & the security exception \\
+\hline
+{\em No\-Such\-Method\-Exception} & the no such method exception \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 80 of file Base\-Object.\-java.
+
+
+\begin{DoxyCode}
+82                                                                                 \{
+83         Method method = this.getClass().getMethod(strMethod, (Class<?>) null);
+84         return method.invoke(this, args);
+85     \}
+\end{DoxyCode}
+\hypertarget{classcom_1_1github_1_1walterfan_1_1gtd_1_1model_1_1BaseObject_afbdf03e5477a44c75e95e6cc46a98d76}{\index{com\-::github\-::walterfan\-::gtd\-::model\-::\-Base\-Object@{com\-::github\-::walterfan\-::gtd\-::model\-::\-Base\-Object}!read\-String@{read\-String}}
+\index{read\-String@{read\-String}!com::github::walterfan::gtd::model::BaseObject@{com\-::github\-::walterfan\-::gtd\-::model\-::\-Base\-Object}}
+\subsubsection[{read\-String}]{\setlength{\rightskip}{0pt plus 5cm}String com.\-github.\-walterfan.\-gtd.\-model.\-Base\-Object.\-read\-String (
+\begin{DoxyParamCaption}
+\item[{Object\-Input}]{in, }
+\item[{int}]{len}
+\end{DoxyParamCaption}
+) throws I\-O\-Exception\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}}\label{classcom_1_1github_1_1walterfan_1_1gtd_1_1model_1_1BaseObject_afbdf03e5477a44c75e95e6cc46a98d76}
+Read string.
+
+
+\begin{DoxyParams}{Parameters}
+{\em in} & the in \\
+\hline
+{\em len} & the len \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the string 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em I\-O\-Exception} & Signals that an I/\-O exception has occurred. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 95 of file Base\-Object.\-java.
+
+
+\begin{DoxyCode}
+95                                                                             \{
+96         \textcolor{keywordflow}{if} (len > 0) \{
+97             byte[] bytes = \textcolor{keyword}{new} byte[len];
+98             in.read(bytes, 0, len);
+99             \textcolor{keywordflow}{return} \textcolor{keyword}{new} String(bytes);
+100         \} \textcolor{keywordflow}{else} \{
+101             \textcolor{keywordflow}{return} null;
+102         \}
+103     \}
+\end{DoxyCode}
+\hypertarget{classcom_1_1github_1_1walterfan_1_1gtd_1_1model_1_1BaseObject_aa6dbf926bf2dea61bc4ae295c00c8998}{\index{com\-::github\-::walterfan\-::gtd\-::model\-::\-Base\-Object@{com\-::github\-::walterfan\-::gtd\-::model\-::\-Base\-Object}!write\-String@{write\-String}}
+\index{write\-String@{write\-String}!com::github::walterfan::gtd::model::BaseObject@{com\-::github\-::walterfan\-::gtd\-::model\-::\-Base\-Object}}
+\subsubsection[{write\-String}]{\setlength{\rightskip}{0pt plus 5cm}void com.\-github.\-walterfan.\-gtd.\-model.\-Base\-Object.\-write\-String (
+\begin{DoxyParamCaption}
+\item[{Object\-Output}]{buf, }
+\item[{String}]{str}
+\end{DoxyParamCaption}
+) throws I\-O\-Exception\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}}\label{classcom_1_1github_1_1walterfan_1_1gtd_1_1model_1_1BaseObject_aa6dbf926bf2dea61bc4ae295c00c8998}
+Write string.
+
+
+\begin{DoxyParams}{Parameters}
+{\em buf} & the buf \\
+\hline
+{\em str} & the str \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em I\-O\-Exception} & Signals that an I/\-O exception has occurred. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 112 of file Base\-Object.\-java.
+
+
+\begin{DoxyCode}
+112                                                                                 \{
+113 
+114         \textcolor{keywordflow}{if} (null == str) \{
+115             buf.writeInt(0);
+116         \} \textcolor{keywordflow}{else} \{
+117             byte[] bytes = str.getBytes();
+118             buf.writeInt(bytes.length);
+119             buf.write(bytes);
+120         \}
+121     \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+/cygdrive/d/workspace/java/\-G\-T\-D/src/com/github/walterfan/gtd/model/Base\-Object.\-java\end{DoxyCompactItemize}
