@@ -25,17 +25,19 @@ public final class R {
     public static final class id {
         public static final int TextView01=0x7f080004;
         public static final int TextView02=0x7f080006;
-        public static final int action_search=0x7f08001c;
-        public static final int action_settings=0x7f08001d;
-        public static final int action_start_sync=0x7f08001e;
-        public static final int action_stop_sync=0x7f08001f;
+        public static final int action_search=0x7f08001f;
+        public static final int action_settings=0x7f080020;
+        public static final int action_start_sync=0x7f080021;
+        public static final int action_stop_sync=0x7f080022;
         public static final int blank_frame=0x7f080011;
         public static final int btn_about=0x7f08000e;
         public static final int btn_exit=0x7f08000f;
         public static final int btn_signin=0x7f08000d;
         public static final int btn_test=0x7f08000c;
         public static final int button1=0x7f080013;
+        public static final int cb_task_finish=0x7f080017;
         public static final int faceImg=0x7f080002;
+        public static final int list_task=0x7f080019;
         public static final int loginButton=0x7f080008;
         public static final int main_action_panel=0x7f08000b;
         public static final int passwordEditText=0x7f080005;
@@ -45,15 +47,16 @@ public final class R {
         public static final int stop_button=0x7f080016;
         public static final int task_action_panel=0x7f080009;
         public static final int task_add=0x7f080001;
-        public static final int task_button=0x7f08001b;
-        public static final int task_icon=0x7f080018;
-        public static final int task_list=0x7f080017;
+        public static final int task_button=0x7f08001e;
+        public static final int task_icon=0x7f08001b;
+        public static final int task_list=0x7f08001a;
         public static final int task_list_panel=0x7f08000a;
         public static final int task_list_view=0x7f080010;
         public static final int task_name=0x7f080000;
-        public static final int task_priority=0x7f08001a;
-        public static final int task_title=0x7f080019;
+        public static final int task_priority=0x7f08001d;
+        public static final int task_title=0x7f08001c;
         public static final int textView1=0x7f080012;
+        public static final int txt_task=0x7f080018;
         public static final int userNameEditText=0x7f080003;
     }
     public static final class layout {
@@ -64,8 +67,9 @@ public final class R {
         public static final int blank_frame=0x7f030004;
         public static final int simple_linear=0x7f030005;
         public static final int task_broadcast=0x7f030006;
-        public static final int task_fragment=0x7f030007;
-        public static final int task_item=0x7f030008;
+        public static final int task_detail=0x7f030007;
+        public static final int task_fragment=0x7f030008;
+        public static final int task_item=0x7f030009;
     }
     public static final class menu {
         public static final int main_activity_actions=0x7f070000;
