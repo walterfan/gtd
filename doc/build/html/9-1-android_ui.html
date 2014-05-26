@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>GTD application design &mdash; GTD 1.0 documentation</title>
+    <title>Android UI &mdash; GTD 1.0 documentation</title>
     
     <link rel="stylesheet" href="_static/default.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -25,8 +25,7 @@
     <script type="text/javascript" src="_static/doctools.js"></script>
     <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="top" title="GTD 1.0 documentation" href="index.html" />
-    <link rel="next" title="Android UI" href="9-1-android_ui.html" />
-    <link rel="prev" title="GTD Overview" href="1-introduction.html" /> 
+    <link rel="prev" title="GTD application design" href="2-design.html" /> 
   </head>
   <body>
     <div class="related">
@@ -36,10 +35,7 @@
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="9-1-android_ui.html" title="Android UI"
-             accesskey="N">next</a> |</li>
-        <li class="right" >
-          <a href="1-introduction.html" title="GTD Overview"
+          <a href="2-design.html" title="GTD application design"
              accesskey="P">previous</a> |</li>
         <li><a href="index.html">GTD 1.0 documentation</a> &raquo;</li> 
       </ul>
@@ -50,36 +46,63 @@
         <div class="bodywrapper">
           <div class="body">
             
-  <div class="section" id="gtd-application-design">
-<h1><a class="toc-backref" href="#id1">GTD application design</a><a class="headerlink" href="#gtd-application-design" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="android-ui">
+<h1><a class="toc-backref" href="#id1">Android UI</a><a class="headerlink" href="#android-ui" title="Permalink to this headline">¶</a></h1>
 <div class="contents topic" id="table-of-contents">
 <p class="topic-title first">Table of Contents</p>
 <ul class="simple">
-<li><a class="reference internal" href="#gtd-application-design" id="id1">GTD application design</a><ul>
-<li><a class="reference internal" href="#ui" id="id2">UI</a></li>
-<li><a class="reference internal" href="#data-structure" id="id3">Data Structure</a></li>
+<li><a class="reference internal" href="#android-ui" id="id1">Android UI</a><ul>
+<li><a class="reference internal" href="#android-layout" id="id2">Android Layout</a><ul>
+<li><a class="reference internal" href="#basic-layout" id="id3">Basic Layout</a></li>
+<li><a class="reference internal" href="#other-layout" id="id4">Other Layout</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#methods" id="id5">Methods</a></li>
 </ul>
 </li>
 </ul>
 </div>
-<div class="section" id="ui">
-<h2><a class="toc-backref" href="#id2">UI</a><a class="headerlink" href="#ui" title="Permalink to this headline">¶</a></h2>
+<p>Android UI layout and components</p>
+<div class="section" id="android-layout">
+<h2><a class="toc-backref" href="#id2">Android Layout</a><a class="headerlink" href="#android-layout" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="basic-layout">
+<h3><a class="toc-backref" href="#id3">Basic Layout</a><a class="headerlink" href="#basic-layout" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li>GTD task dashboard</li>
-<li>Task CRUDLS
-* Create
-* Retrieve
-* Update
-* Delete
-* List
-* Search</li>
+<li>LinearLayout</li>
+<li>RelativeLayout</li>
+<li>AbsoluteLayout</li>
+<li>FrameLayout</li>
+<li>TableLayout</li>
 </ul>
 </div>
-<div class="section" id="data-structure">
-<h2><a class="toc-backref" href="#id3">Data Structure</a><a class="headerlink" href="#data-structure" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="other-layout">
+<h3><a class="toc-backref" href="#id4">Other Layout</a><a class="headerlink" href="#other-layout" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li>Task</li>
-<li>User</li>
+<li>Tab Layout</li>
+<li>ScrollView</li>
+<li><span class="target" id="listview">ListView</span></li>
+<li>GridView</li>
+<li>WebView</li>
+<li>Gallery</li>
+<li>SlidingDrawer</li>
+<li>Dialog
+- AlertDialog
+- ProgressDialog
+- DatePickerDialog
+- TimePickerDialog</li>
+<li>Menu
+- options menu
+- context menu
+- sub menu</li>
+<li>Notification</li>
+<li>Toast</li>
+</ul>
+</div>
+</div>
+<div class="section" id="methods">
+<h2><a class="toc-backref" href="#id5">Methods</a><a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>GTD methods has five steps</li>
 </ul>
 </div>
 </div>
@@ -92,22 +115,23 @@
         <div class="sphinxsidebarwrapper">
   <h3><a href="index.html">Table Of Contents</a></h3>
   <ul>
-<li><a class="reference internal" href="#">GTD application design</a><ul>
-<li><a class="reference internal" href="#ui">UI</a></li>
-<li><a class="reference internal" href="#data-structure">Data Structure</a></li>
+<li><a class="reference internal" href="#">Android UI</a><ul>
+<li><a class="reference internal" href="#android-layout">Android Layout</a><ul>
+<li><a class="reference internal" href="#basic-layout">Basic Layout</a></li>
+<li><a class="reference internal" href="#other-layout">Other Layout</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#methods">Methods</a></li>
 </ul>
 </li>
 </ul>
 
   <h4>Previous topic</h4>
-  <p class="topless"><a href="1-introduction.html"
-                        title="previous chapter">GTD Overview</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="9-1-android_ui.html"
-                        title="next chapter">Android UI</a></p>
+  <p class="topless"><a href="2-design.html"
+                        title="previous chapter">GTD application design</a></p>
   <h3>This Page</h3>
   <ul class="this-page-menu">
-    <li><a href="_sources/2-design.txt"
+    <li><a href="_sources/9-1-android_ui.txt"
            rel="nofollow">Show Source</a></li>
   </ul>
 <div id="searchbox" style="display: none">
@@ -134,10 +158,7 @@
           <a href="genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="9-1-android_ui.html" title="Android UI"
-             >next</a> |</li>
-        <li class="right" >
-          <a href="1-introduction.html" title="GTD Overview"
+          <a href="2-design.html" title="GTD application design"
              >previous</a> |</li>
         <li><a href="index.html">GTD 1.0 documentation</a> &raquo;</li> 
       </ul>

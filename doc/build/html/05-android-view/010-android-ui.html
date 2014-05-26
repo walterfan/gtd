@@ -1,0 +1,245 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Android UI &mdash; GTD 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="GTD 1.0 documentation" href="../index.html" />
+    <link rel="up" title="Android View" href="index.html" />
+    <link rel="prev" title="Android View" href="index.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="index.html" title="Android View"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../index.html">GTD 1.0 documentation</a> &raquo;</li>
+          <li><a href="index.html" accesskey="U">Android View</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="android-ui">
+<span id="id1"></span><h1><a class="toc-backref" href="#id4">Android UI</a><a class="headerlink" href="#android-ui" title="Permalink to this headline">¶</a></h1>
+<div class="contents topic" id="table-of-contents">
+<p class="topic-title first">Table of Contents</p>
+<ul class="simple">
+<li><a class="reference internal" href="#android-ui" id="id4">Android UI</a><ul>
+<li><a class="reference internal" href="#android-layout" id="id5">Android Layout</a><ul>
+<li><a class="reference internal" href="#basic-layout" id="id6">Basic Layout</a><ul>
+<li><a class="reference internal" href="#linearlayout" id="id7">LinearLayout</a></li>
+<li><a class="reference internal" href="#relativelayout" id="id8">RelativeLayout</a></li>
+<li><a class="reference internal" href="#absolutelayout" id="id9">AbsoluteLayout</a></li>
+<li><a class="reference internal" href="#framelayout" id="id10">FrameLayout</a></li>
+<li><a class="reference internal" href="#tablelayout" id="id11">TableLayout</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#other-layout" id="id12">Other Layout</a><ul>
+<li><a class="reference internal" href="#tab-layout" id="id13">Tab Layout</a></li>
+<li><a class="reference internal" href="#scrollview" id="id14">ScrollView</a></li>
+<li><a class="reference internal" href="#id2" id="id15">ListView</a></li>
+<li><a class="reference internal" href="#gridview" id="id16">GridView</a></li>
+<li><a class="reference internal" href="#webview" id="id17">WebView</a></li>
+<li><a class="reference internal" href="#gallery" id="id18">Gallery</a></li>
+<li><a class="reference internal" href="#slidingdrawer" id="id19">SlidingDrawer</a></li>
+<li><a class="reference internal" href="#dialog" id="id20">Dialog</a></li>
+<li><a class="reference internal" href="#menu" id="id21">Menu</a></li>
+<li><a class="reference internal" href="#notification" id="id22">Notification</a></li>
+<li><a class="reference internal" href="#toast" id="id23">Toast</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<p>Android UI layout and components</p>
+<div class="section" id="android-layout">
+<h2><a class="toc-backref" href="#id5">Android Layout</a><a class="headerlink" href="#android-layout" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="basic-layout">
+<h3><a class="toc-backref" href="#id6">Basic Layout</a><a class="headerlink" href="#basic-layout" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="linearlayout">
+<h4><a class="toc-backref" href="#id7">LinearLayout</a><a class="headerlink" href="#linearlayout" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="relativelayout">
+<h4><a class="toc-backref" href="#id8">RelativeLayout</a><a class="headerlink" href="#relativelayout" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="absolutelayout">
+<h4><a class="toc-backref" href="#id9">AbsoluteLayout</a><a class="headerlink" href="#absolutelayout" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="framelayout">
+<h4><a class="toc-backref" href="#id10">FrameLayout</a><a class="headerlink" href="#framelayout" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="tablelayout">
+<h4><a class="toc-backref" href="#id11">TableLayout</a><a class="headerlink" href="#tablelayout" title="Permalink to this headline">¶</a></h4>
+</div>
+</div>
+<div class="section" id="other-layout">
+<h3><a class="toc-backref" href="#id12">Other Layout</a><a class="headerlink" href="#other-layout" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="tab-layout">
+<h4><a class="toc-backref" href="#id13">Tab Layout</a><a class="headerlink" href="#tab-layout" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="scrollview">
+<h4><a class="toc-backref" href="#id14">ScrollView</a><a class="headerlink" href="#scrollview" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id2">
+<h4><a class="reference external" href="./020-listview.html">ListView</a><a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="gridview">
+<h4><a class="toc-backref" href="#id16">GridView</a><a class="headerlink" href="#gridview" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="webview">
+<h4><a class="toc-backref" href="#id17">WebView</a><a class="headerlink" href="#webview" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="gallery">
+<h4><a class="toc-backref" href="#id18">Gallery</a><a class="headerlink" href="#gallery" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="slidingdrawer">
+<h4><a class="toc-backref" href="#id19">SlidingDrawer</a><a class="headerlink" href="#slidingdrawer" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="dialog">
+<h4><a class="toc-backref" href="#id20">Dialog</a><a class="headerlink" href="#dialog" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li>AlertDialog</li>
+<li>ProgressDialog</li>
+<li>DatePickerDialog</li>
+<li>TimePickerDialog</li>
+</ul>
+</div>
+<div class="section" id="menu">
+<h4><a class="toc-backref" href="#id21">Menu</a><a class="headerlink" href="#menu" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li>options menu</li>
+<li>context menu</li>
+<li>sub menu</li>
+</ul>
+</div>
+<div class="section" id="notification">
+<h4><a class="toc-backref" href="#id22">Notification</a><a class="headerlink" href="#notification" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="toast">
+<h4><a class="toc-backref" href="#id23">Toast</a><a class="headerlink" href="#toast" title="Permalink to this headline">¶</a></h4>
+<hr class="docutils" />
+<table class="docutils footnote" frame="void" id="id3" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[1]</td><td><a class="reference external" href="http://developer.android.com/design/get-started/ui-overview.html">http://developer.android.com/design/get-started/ui-overview.html</a></td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Android UI</a><ul>
+<li><a class="reference internal" href="#android-layout">Android Layout</a><ul>
+<li><a class="reference internal" href="#basic-layout">Basic Layout</a><ul>
+<li><a class="reference internal" href="#linearlayout">LinearLayout</a></li>
+<li><a class="reference internal" href="#relativelayout">RelativeLayout</a></li>
+<li><a class="reference internal" href="#absolutelayout">AbsoluteLayout</a></li>
+<li><a class="reference internal" href="#framelayout">FrameLayout</a></li>
+<li><a class="reference internal" href="#tablelayout">TableLayout</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#other-layout">Other Layout</a><ul>
+<li><a class="reference internal" href="#tab-layout">Tab Layout</a></li>
+<li><a class="reference internal" href="#scrollview">ScrollView</a></li>
+<li><a class="reference internal" href="#id2">ListView</a></li>
+<li><a class="reference internal" href="#gridview">GridView</a></li>
+<li><a class="reference internal" href="#webview">WebView</a></li>
+<li><a class="reference internal" href="#gallery">Gallery</a></li>
+<li><a class="reference internal" href="#slidingdrawer">SlidingDrawer</a></li>
+<li><a class="reference internal" href="#dialog">Dialog</a></li>
+<li><a class="reference internal" href="#menu">Menu</a></li>
+<li><a class="reference internal" href="#notification">Notification</a></li>
+<li><a class="reference internal" href="#toast">Toast</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="index.html"
+                        title="previous chapter">Android View</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../_sources/05-android-view/010-android-ui.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="index.html" title="Android View"
+             >previous</a> |</li>
+        <li><a href="../index.html">GTD 1.0 documentation</a> &raquo;</li>
+          <li><a href="index.html" >Android View</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2014, walter.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2b1.
+    </div>
+  </body>
+</html>
