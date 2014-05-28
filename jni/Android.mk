@@ -17,6 +17,17 @@ LOCAL_MODULE    := walter
 LOCAL_SRC_FILES := test/waltertest.cpp
 
 include $(BUILD_EXECUTABLE)
+#-------------------- msgbus.so -------------------------
+include $(CLEAR_VARS)
+
+LOCAL_C_INCLUDES += $(LOCAL_PATH)/util
+
+LOCAL_MODULE    := msgbus
+LOCAL_SRC_FILES := msgbus.cpp
+LOCAL_LDLIBS := -ldl -llog
+
+include $(BUILD_SHARED_LIBRARY)
+
 #-------------------- libgtd.so -------------------------
 include $(CLEAR_VARS)
 
