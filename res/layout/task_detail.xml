@@ -22,6 +22,11 @@
         android:entries="@array/priorities"
         android:prompt="@string/task_priority" />
 
-
+	<ImageButton  android:id="@+id/task_edit" 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/button_edit"
+        android:src="@drawable/ic_content_edit"
+        />
 
 </LinearLayout>

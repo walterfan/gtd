@@ -29,7 +29,7 @@ public class MainActivity extends Activity implements OnClickListener {
         Log.d(TAG, "onCreate...");
    
         
-        View testButton = findViewById(R.id.btn_test);
+        /*View testButton = findViewById(R.id.btn_test);
         testButton.setOnClickListener(this);
         
         View testSignIn = findViewById(R.id.btn_signin);
@@ -39,10 +39,10 @@ public class MainActivity extends Activity implements OnClickListener {
         testAbout.setOnClickListener(this);
         
         View testExit = findViewById(R.id.btn_exit);
-        testExit.setOnClickListener(this);
+        testExit.setOnClickListener(this);*/
     }
     
-	public void addTask(View view) {
+	public void addTask(View view) { 
 		Intent intent = new Intent(this, DisplayMessageActivity.class);
 	    EditText editText = (EditText) findViewById(R.id.task_name);
 	    String message = editText.getText().toString();
@@ -64,20 +64,34 @@ public class MainActivity extends Activity implements OnClickListener {
 	    switch (item.getItemId()) {
 	        case R.id.action_search:
 	            openSearch();
-	            return true;
+	            break; 
 	        case R.id.action_settings:
 	            openSettings();
-	            return true;
+	            break; 
 	        case R.id.action_start_sync:
 	            startService();
-	            return true;
+	            break; 
 	        case R.id.action_stop_sync:
 	        	stopService();
-	            return true;    
-	            
+	            break; 
+	        case R.id.action_test:
+				Intent i = new Intent(this, TestActivity.class);
+				startActivity(i);
+				break;
+			case R.id.action_signin:
+				Intent j = new Intent(this, LoginActivity.class);
+				startActivity(j);
+				break;
+			case R.id.action_about:
+				Toast.makeText(this, "Wrote by Walter Fan on 4/10/14", Toast.LENGTH_LONG).show();
+				break;
+			case R.id.action_exit:
+				finish();
+				break;
 	        default:
 	            return super.onOptionsItemSelected(item);
 	    }
+	    return true;    
 	}
 	
 	private void openSearch() {
@@ -107,7 +121,7 @@ public class MainActivity extends Activity implements OnClickListener {
 	public void onClick(View view) {
 		switch(view.getId())
 		{
-		case R.id.btn_test:
+		/*case R.id.btn_test:
 			Intent i = new Intent(this, TestActivity.class);
 			startActivity(i);
 			break;
@@ -120,7 +134,7 @@ public class MainActivity extends Activity implements OnClickListener {
 			break;
 		case R.id.btn_exit:
 			finish();
-			break;
+			break;*/
 		default:
 			Toast.makeText(this, "TBD...Walter Fan", Toast.LENGTH_LONG).show();
 		

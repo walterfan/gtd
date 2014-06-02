@@ -16,11 +16,12 @@
         android:layout_height="wrap_content"
               
         android:hint="@string/task_name"/>
-	<Button  android:id="@+id/task_add" 
+    
+	<ImageButton  android:id="@+id/task_add" 
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="@string/button_add"
-        android:onClick="addTask"
+        android:contentDescription="@string/button_add"
+        android:src="@drawable/ic_btn_add"
         />
 </LinearLayout>
 <ScrollView android:id="@+id/task_list_panel" 
@@ -28,42 +29,6 @@
     android:background="#99FFCC" android:scrollbars="vertical">
     
 </ScrollView>
-<LinearLayout
-    android:id="@+id/main_action_panel"
-    android:layout_width="match_parent"
-    android:layout_height="fill_parent"
-    android:layout_gravity="bottom"
-    android:gravity="bottom|center_horizontal"
-    android:orientation="horizontal"
-    android:showDividers="end" >
-    
-    <Button  android:id="@+id/btn_test" 
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="@string/button_test" />
-    
-    <Button  android:id="@+id/btn_signin" 
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="@string/button_signin" />
-<!--     
-    <Button  android:id="@+id/btn_signup" 
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="@string/button_signup" /> -->
-    
-    <Button  android:id="@+id/btn_about" 
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="@string/button_about" />
-    
-    <Button  android:id="@+id/btn_exit" 
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="@string/button_exit" />
-    
-    
-    
-</LinearLayout>
+
 
 </LinearLayout>
