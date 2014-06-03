@@ -5,7 +5,11 @@ import com.thoughtworks.xstream.io.xml.DomDriver;
 
 
 public class Account extends BaseObject {
-    private String userName;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 8883396035905504021L;
+	private String userName;
     private String password;
     private String siteName;
     private String siteUrl;

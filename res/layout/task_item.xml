@@ -11,18 +11,7 @@ finished?
     android:layout_height="?android:attr/listPreferredItemHeight"
     android:padding="6dip" >
 
-<!--     <ImageView
-        android:id="@+id/task_icon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:contentDescription="@string/task_icon"
-        android:src="@drawable/ic_launcher" 
-        android:adjustViewBounds="true"
-        android:maxWidth="50dip"
-        android:maxHeight="50dip"
-        /> -->
+
 
     <CheckBox android:id="@+id/task_isdone"         
         android:layout_width="wrap_content"
@@ -39,22 +28,14 @@ finished?
         android:singleLine="true"
         android:text="@string/title_task"/>
 
-<!--     <TextView
-        android:id="@+id/task_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignWithParentIfMissing="true"
-        android:layout_toRightOf="@id/task_title"
-        android:textSize="25sp"
-        android:text="todo..." /> -->
-        
-        <Spinner android:id="@+id/task_priority"
+    <Spinner android:id="@+id/task_priority"
 		android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_toRightOf="@id/task_title"
         android:entries="@array/priorities"
         android:prompt="@string/task_priority"
         />
+    <!-- http://developer.android.com/reference/android/widget/ImageButton.html -->
     <Button
         android:id="@+id/task_button"
         android:layout_width="wrap_content"

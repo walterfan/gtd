@@ -1,0 +1,75 @@
+\hypertarget{classcom_1_1github_1_1walterfan_1_1gtd_1_1parcel_1_1User}{\section{com.\-github.\-walterfan.\-gtd.\-parcel.\-User Class Reference}
+\label{classcom_1_1github_1_1walterfan_1_1gtd_1_1parcel_1_1User}\index{com.\-github.\-walterfan.\-gtd.\-parcel.\-User@{com.\-github.\-walterfan.\-gtd.\-parcel.\-User}}
+}
+Inheritance diagram for com.\-github.\-walterfan.\-gtd.\-parcel.\-User\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classcom_1_1github_1_1walterfan_1_1gtd_1_1parcel_1_1User}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classcom_1_1github_1_1walterfan_1_1gtd_1_1parcel_1_1User_a022a6d9b44e2bbddef063e959c5640fc}{int {\bfseries describe\-Contents} ()}\label{classcom_1_1github_1_1walterfan_1_1gtd_1_1parcel_1_1User_a022a6d9b44e2bbddef063e959c5640fc}
+
+\item 
+\hypertarget{classcom_1_1github_1_1walterfan_1_1gtd_1_1parcel_1_1User_aebc736bb2e6396cd49f94ed49e3f31d3}{void {\bfseries write\-To\-Parcel} (Parcel dest, int flags)}\label{classcom_1_1github_1_1walterfan_1_1gtd_1_1parcel_1_1User_aebc736bb2e6396cd49f94ed49e3f31d3}
+
+\item 
+\hypertarget{classcom_1_1github_1_1walterfan_1_1gtd_1_1parcel_1_1User_acdf229bb23ca6a0e747fc57a7a1b0551}{String {\bfseries get\-User\-Name} ()}\label{classcom_1_1github_1_1walterfan_1_1gtd_1_1parcel_1_1User_acdf229bb23ca6a0e747fc57a7a1b0551}
+
+\item 
+\hypertarget{classcom_1_1github_1_1walterfan_1_1gtd_1_1parcel_1_1User_af8a7dcbb792911d639d96a486310bd35}{void {\bfseries set\-User\-Name} (String user\-Name)}\label{classcom_1_1github_1_1walterfan_1_1gtd_1_1parcel_1_1User_af8a7dcbb792911d639d96a486310bd35}
+
+\item 
+\hypertarget{classcom_1_1github_1_1walterfan_1_1gtd_1_1parcel_1_1User_aded61ba54a3ab71b6b57606cf88546f6}{String {\bfseries get\-Password} ()}\label{classcom_1_1github_1_1walterfan_1_1gtd_1_1parcel_1_1User_aded61ba54a3ab71b6b57606cf88546f6}
+
+\item 
+\hypertarget{classcom_1_1github_1_1walterfan_1_1gtd_1_1parcel_1_1User_a49c6f07f2523d19b00159ad508e97947}{void {\bfseries set\-Password} (String password)}\label{classcom_1_1github_1_1walterfan_1_1gtd_1_1parcel_1_1User_a49c6f07f2523d19b00159ad508e97947}
+
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static final \\*
+Parcelable.\-Creator$<$ \hyperlink{classcom_1_1github_1_1walterfan_1_1gtd_1_1parcel_1_1User}{User} $>$ {\bfseries C\-R\-E\-A\-T\-O\-R}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 6 of file User.\-java.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classcom_1_1github_1_1walterfan_1_1gtd_1_1parcel_1_1User_a42f8199f5f8617c4026624a50ac743cc}{\index{com\-::github\-::walterfan\-::gtd\-::parcel\-::\-User@{com\-::github\-::walterfan\-::gtd\-::parcel\-::\-User}!C\-R\-E\-A\-T\-O\-R@{C\-R\-E\-A\-T\-O\-R}}
+\index{C\-R\-E\-A\-T\-O\-R@{C\-R\-E\-A\-T\-O\-R}!com::github::walterfan::gtd::parcel::User@{com\-::github\-::walterfan\-::gtd\-::parcel\-::\-User}}
+\subsubsection[{C\-R\-E\-A\-T\-O\-R}]{\setlength{\rightskip}{0pt plus 5cm}final Parcelable.\-Creator$<${\bf User}$>$ com.\-github.\-walterfan.\-gtd.\-parcel.\-User.\-C\-R\-E\-A\-T\-O\-R\hspace{0.3cm}{\ttfamily [static]}}}\label{classcom_1_1github_1_1walterfan_1_1gtd_1_1parcel_1_1User_a42f8199f5f8617c4026624a50ac743cc}
+{\bfseries Initial value\-:}
+\begin{DoxyCode}
+= \textcolor{keyword}{new} Creator<User> () \{
+        @Override
+        \textcolor{keyword}{public} User createFromParcel(Parcel source) \{
+            User user = \textcolor{keyword}{new} User();
+            user.userName = source.readString();
+            user.password = source.readString();
+            \textcolor{keywordflow}{return} user;
+        \}
+        
+        @Override
+        \textcolor{keyword}{public} User[] newArray(\textcolor{keywordtype}{int} size) \{
+            \textcolor{keywordflow}{return} \textcolor{keyword}{new} User[size];
+        \}
+    \}
+\end{DoxyCode}
+
+
+Definition at line 10 of file User.\-java.
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+/cygdrive/d/workspace/java/\-G\-T\-D/src/com/github/walterfan/gtd/parcel/User.\-java\end{DoxyCompactItemize}

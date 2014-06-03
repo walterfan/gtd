@@ -1,0 +1,44 @@
+===================================
+Android UI
+===================================
+
+.. contents:: Table of Contents
+
+Android UI layout and components
+
+Android Layout
+-------------------------
+
+Basic Layout
+``````````````````````````
+- LinearLayout
+- RelativeLayout
+- AbsoluteLayout
+- FrameLayout
+- TableLayout
+
+Other Layout
+``````````````````````````
+- Tab Layout
+- ScrollView
+- _`ListView`
+- GridView
+- WebView
+- Gallery
+- SlidingDrawer
+- Dialog
+  - AlertDialog
+  - ProgressDialog
+  - DatePickerDialog
+  - TimePickerDialog
+- Menu
+  - options menu
+  - context menu
+  - sub menu
+- Notification
+- Toast   
+
+
+Methods
+--------------------
+* GTD methods has five steps

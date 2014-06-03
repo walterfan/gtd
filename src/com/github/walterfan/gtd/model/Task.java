@@ -1,11 +1,15 @@
 package com.github.walterfan.gtd.model;
 
 import java.sql.Timestamp;
+import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
 
 public class Task extends BaseObject {
-	
+	public class TaskGroup {
+		int groupId;
+		List<Task> tasks;
+	}
     public final static int TASKTYPE_UNDEFINED = 0;
 
     public final static int TASKTYPE_NEXTACTION = 1;

@@ -1,0 +1,107 @@
+\hypertarget{classcom_1_1github_1_1walterfan_1_1gtd_1_1util_1_1GtdDatabase}{\section{com.\-github.\-walterfan.\-gtd.\-util.\-Gtd\-Database Class Reference}
+\label{classcom_1_1github_1_1walterfan_1_1gtd_1_1util_1_1GtdDatabase}\index{com.\-github.\-walterfan.\-gtd.\-util.\-Gtd\-Database@{com.\-github.\-walterfan.\-gtd.\-util.\-Gtd\-Database}}
+}
+Inheritance diagram for com.\-github.\-walterfan.\-gtd.\-util.\-Gtd\-Database\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classcom_1_1github_1_1walterfan_1_1gtd_1_1util_1_1GtdDatabase}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classcom_1_1github_1_1walterfan_1_1gtd_1_1util_1_1GtdDatabase_a3e80ee44f75a3b005821f1d078fe605d}{Gtd\-Database} (Context context, String name, Cursor\-Factory factory, int version)
+\item 
+\hyperlink{classcom_1_1github_1_1walterfan_1_1gtd_1_1util_1_1GtdDatabase_ae7fee67455c42c67ad616ba7c730e241}{Gtd\-Database} (Context context, String name, Cursor\-Factory factory, int version, Database\-Error\-Handler error\-Handler)
+\item 
+\hypertarget{classcom_1_1github_1_1walterfan_1_1gtd_1_1util_1_1GtdDatabase_a8ab7859d689ca38989723e802667ec1f}{void {\bfseries on\-Create} (S\-Q\-Lite\-Database arg0)}\label{classcom_1_1github_1_1walterfan_1_1gtd_1_1util_1_1GtdDatabase_a8ab7859d689ca38989723e802667ec1f}
+
+\item 
+\hypertarget{classcom_1_1github_1_1walterfan_1_1gtd_1_1util_1_1GtdDatabase_a446d976704e723622be388de26f2314c}{void {\bfseries on\-Upgrade} (S\-Q\-Lite\-Database db, int old\-Version, int new\-Version)}\label{classcom_1_1github_1_1walterfan_1_1gtd_1_1util_1_1GtdDatabase_a446d976704e723622be388de26f2314c}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+walter 
+\end{DoxyAuthor}
+
+
+Definition at line 16 of file Gtd\-Database.\-java.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classcom_1_1github_1_1walterfan_1_1gtd_1_1util_1_1GtdDatabase_a3e80ee44f75a3b005821f1d078fe605d}{\index{com\-::github\-::walterfan\-::gtd\-::util\-::\-Gtd\-Database@{com\-::github\-::walterfan\-::gtd\-::util\-::\-Gtd\-Database}!Gtd\-Database@{Gtd\-Database}}
+\index{Gtd\-Database@{Gtd\-Database}!com::github::walterfan::gtd::util::GtdDatabase@{com\-::github\-::walterfan\-::gtd\-::util\-::\-Gtd\-Database}}
+\subsubsection[{Gtd\-Database}]{\setlength{\rightskip}{0pt plus 5cm}com.\-github.\-walterfan.\-gtd.\-util.\-Gtd\-Database.\-Gtd\-Database (
+\begin{DoxyParamCaption}
+\item[{Context}]{context, }
+\item[{String}]{name, }
+\item[{Cursor\-Factory}]{factory, }
+\item[{int}]{version}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classcom_1_1github_1_1walterfan_1_1gtd_1_1util_1_1GtdDatabase_a3e80ee44f75a3b005821f1d078fe605d}
+
+\begin{DoxyParams}{Parameters}
+{\em context} & \\
+\hline
+{\em name} & \\
+\hline
+{\em factory} & \\
+\hline
+{\em version} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 33 of file Gtd\-Database.\-java.
+
+
+\begin{DoxyCode}
+33                                                                                          \{
+34         super(context, name, factory, version);
+35         this.mContext = context;
+36     \}
+\end{DoxyCode}
+\hypertarget{classcom_1_1github_1_1walterfan_1_1gtd_1_1util_1_1GtdDatabase_ae7fee67455c42c67ad616ba7c730e241}{\index{com\-::github\-::walterfan\-::gtd\-::util\-::\-Gtd\-Database@{com\-::github\-::walterfan\-::gtd\-::util\-::\-Gtd\-Database}!Gtd\-Database@{Gtd\-Database}}
+\index{Gtd\-Database@{Gtd\-Database}!com::github::walterfan::gtd::util::GtdDatabase@{com\-::github\-::walterfan\-::gtd\-::util\-::\-Gtd\-Database}}
+\subsubsection[{Gtd\-Database}]{\setlength{\rightskip}{0pt plus 5cm}com.\-github.\-walterfan.\-gtd.\-util.\-Gtd\-Database.\-Gtd\-Database (
+\begin{DoxyParamCaption}
+\item[{Context}]{context, }
+\item[{String}]{name, }
+\item[{Cursor\-Factory}]{factory, }
+\item[{int}]{version, }
+\item[{Database\-Error\-Handler}]{error\-Handler}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classcom_1_1github_1_1walterfan_1_1gtd_1_1util_1_1GtdDatabase_ae7fee67455c42c67ad616ba7c730e241}
+
+\begin{DoxyParams}{Parameters}
+{\em context} & \\
+\hline
+{\em name} & \\
+\hline
+{\em factory} & \\
+\hline
+{\em version} & \\
+\hline
+{\em error\-Handler} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 45 of file Gtd\-Database.\-java.
+
+
+\begin{DoxyCode}
+46                                                             \{
+47         super(context, name, factory, version, errorHandler);
+48         this.mContext = context;
+49     \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+/cygdrive/d/workspace/java/\-G\-T\-D/src/com/github/walterfan/gtd/util/Gtd\-Database.\-java\end{DoxyCompactItemize}
