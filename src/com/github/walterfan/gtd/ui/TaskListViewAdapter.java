@@ -10,11 +10,10 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import com.github.walterfan.gtd.R;
 
 public class TaskListViewAdapter extends BaseAdapter {
 
@@ -22,7 +21,7 @@ public class TaskListViewAdapter extends BaseAdapter {
 		CheckBox chkFinish;
 		TextView txtTitle;
 		Spinner lstPriority;
-		Button btnEdit;
+		ImageButton btnEdit;
 
 	}
 
@@ -68,7 +67,7 @@ public class TaskListViewAdapter extends BaseAdapter {
 			holder.chkFinish = (CheckBox)convertView.findViewById(_to[0]);
 			holder.txtTitle = (TextView)convertView.findViewById(_to[1]);
 			holder.lstPriority = (Spinner)convertView.findViewById(_to[2]);
-			holder.btnEdit = (Button)convertView.findViewById(R.id.task_button);
+			holder.btnEdit = (ImageButton)convertView.findViewById(_to[3]);
 			
 			convertView.setTag(holder);
 				
@@ -82,11 +81,15 @@ public class TaskListViewAdapter extends BaseAdapter {
 		final Object data0 = dataSet.get(_from[0]);
 		final Object data1 = dataSet.get(_from[1]);
 		final Object data2 = dataSet.get(_from[2]);
+		final Object data3 = dataSet.get(_from[3]);
 		
-		//holder.btnEdit.setImageResource((Integer)data0);
+		holder.chkFinish.setChecked((Boolean)data0);
+		
 		holder.txtTitle.setText(data1.toString());
+		
 		holder.lstPriority.setSelection((Integer)data2);
 		
+		holder.btnEdit.setImageResource((Integer)data3);
 		holder.btnEdit.setFocusable(false);
 		holder.btnEdit.setOnClickListener(new Button.OnClickListener() {
 

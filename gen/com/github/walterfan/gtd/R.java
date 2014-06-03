@@ -34,6 +34,7 @@ public final class R {
         public static final int action_stop_sync=0x7f08001e;
         public static final int action_test=0x7f08001f;
         public static final int blank_frame=0x7f08000c;
+        public static final int btn_task_edit=0x7f080015;
         public static final int button1=0x7f08000e;
         public static final int cb_task_finish=0x7f080012;
         public static final int faceImg=0x7f080002;
@@ -47,7 +48,6 @@ public final class R {
         public static final int task_action_panel=0x7f080009;
         public static final int task_add=0x7f080001;
         public static final int task_button=0x7f08001a;
-        public static final int task_edit=0x7f080015;
         public static final int task_icon=0x7f080017;
         public static final int task_list=0x7f080016;
         public static final int task_list_panel=0x7f08000a;

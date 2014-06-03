@@ -1,6 +1,9 @@
 package com.github.walterfan.gtd;
 
 
+import java.util.List;
+import java.util.Map;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,17 +13,23 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.Toast;
 
 import com.github.walterfan.gtd.service.DataSyncService;
 import com.github.walterfan.gtd.test.TestActivity;
 import com.github.walterfan.gtd.ui.DisplayMessageActivity;
+import com.github.walterfan.gtd.ui.TaskListViewAdapter;
 
 public class MainActivity extends Activity implements OnClickListener {
 	public final static String EXTRA_MESSAGE = "com.github.walterfan.gtd.MESSAGE";
 	
 	private static final String TAG = "GTD.MainActivity";
+	
+	private List<Map<String, ?>> _taskList;
 	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +49,25 @@ public class MainActivity extends Activity implements OnClickListener {
         
         View testExit = findViewById(R.id.btn_exit);
         testExit.setOnClickListener(this);*/
+    }
+    
+    private void initTask(View view) {
+    	ListView listView = (ListView)this.findViewById(R.id.task_list_view);
+		TaskListViewAdapter adapter = new TaskListViewAdapter(this, _taskList, 
+				R.layout.task_detail, 
+				new String[]{"isFinished","title","priority", "resource"}, 
+				new int[]{R.id.cb_task_finish, R.id.txt_task, R.id.list_task, R.id.btn_task_edit});
+		listView.setAdapter(adapter);
+		listView.setOnItemClickListener(new OnItemClickListener() {
+
+			@Override
+			public void onItemClick(AdapterView<?> parent, View view, int position,
+					long id) {
+				Toast.makeText(MainActivity.this, "select position=" + position, Toast.LENGTH_SHORT).show();
+				
+			}
+			
+		});
     }
     
 	public void addTask(View view) { 
@@ -121,20 +149,10 @@ public class MainActivity extends Activity implements OnClickListener {
 	public void onClick(View view) {
 		switch(view.getId())
 		{
-		/*case R.id.btn_test:
-			Intent i = new Intent(this, TestActivity.class);
-			startActivity(i);
+		case R.id.task_add:
+			this.addTask(view);
 			break;
-		case R.id.btn_signin:
-			Intent j = new Intent(this, LoginActivity.class);
-			startActivity(j);
-			break;
-		case R.id.btn_about:
-			Toast.makeText(this, "Wrote by Walter Fan on 4/10/14", Toast.LENGTH_LONG).show();
-			break;
-		case R.id.btn_exit:
-			finish();
-			break;*/
+
 		default:
 			Toast.makeText(this, "TBD...Walter Fan", Toast.LENGTH_LONG).show();
 		

@@ -28,7 +28,7 @@
     android:layout_width="match_parent" android:layout_height="360dip" 
     android:background="#99FFCC" android:scrollbars="vertical">
     
-</ScrollView>
+</ScrollView>    
 
 
 </LinearLayout>
