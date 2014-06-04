@@ -49,6 +49,7 @@ public class MainActivity extends Activity implements OnClickListener {
 		map.put("isdone", false);
 		map.put("title", "Practice English");
 		map.put("priority", 0);
+		map.put("button", R.drawable.ic_content_edit);
 		_tasks.add(map);
 		
         ViewGroup sv = (ViewGroup)findViewById(R.id.task_list_panel);
@@ -58,8 +59,8 @@ public class MainActivity extends Activity implements OnClickListener {
         sv.addView(_taskListView);
         _adapter = new TaskListViewAdapter(this, _tasks, 
 				R.layout.task_item, 
-				new String[]{"isdone","title","priority"}, 
-				new int[]{R.id.task_isdone, R.id.task_title, R.id.task_priority});
+				new String[]{"isdone","title","priority", "button"}, 
+				new int[]{R.id.task_isdone, R.id.task_title, R.id.task_priority, R.id.task_button});
 		_taskListView.setAdapter(_adapter);
 		_taskListView.setOnItemClickListener(new OnItemClickListener() {
 
@@ -126,6 +127,7 @@ public class MainActivity extends Activity implements OnClickListener {
 				map.put("isdone", false);
 				map.put("title", message);
 				map.put("priority", 0);
+				map.put("button", R.drawable.ic_content_edit);
 				_tasks.add(map);
 
 				//_adapter.setData(_tasks);

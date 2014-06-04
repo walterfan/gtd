@@ -36,14 +36,16 @@ finished?
         android:prompt="@string/task_priority"
         />
     <!-- http://developer.android.com/reference/android/widget/ImageButton.html -->
-    <Button
+    <ImageButton
         android:id="@+id/task_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"        
         android:layout_alignWithParentIfMissing="true"
         android:layout_toRightOf="@id/task_priority"
         android:layout_alignParentRight="true"
+        android:background="#00000000"
+        android:contentDescription="@string/task_action"
         style="?android:attr/buttonStyleSmall"
-        android:text="@string/task_action" />
+        />
     
 </RelativeLayout>
