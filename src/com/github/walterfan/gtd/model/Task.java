@@ -6,6 +6,13 @@ import java.util.Map;
 import java.util.TreeMap;
 
 public class Task extends BaseObject {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -7618882930643149359L;
+
+
+
 	public class TaskGroup {
 		int groupId;
 		List<Task> tasks;
@@ -66,6 +73,9 @@ public class Task extends BaseObject {
 	    
 	}
 	
+	public Task(String aTaskName) {
+	    this.taskName = aTaskName;
+	}
 	
 	public Task(Task aTask) {
         super();

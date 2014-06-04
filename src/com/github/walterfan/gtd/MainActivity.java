@@ -24,6 +24,7 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.github.walterfan.gtd.model.Task;
 import com.github.walterfan.gtd.service.DataSyncService;
 import com.github.walterfan.gtd.test.TestActivity;
 import com.github.walterfan.gtd.ui.TaskListViewAdapter;
@@ -31,33 +32,41 @@ import com.github.walterfan.gtd.ui.TaskListViewAdapter;
 public class MainActivity extends Activity implements OnClickListener {
 	public final static String EXTRA_MESSAGE = "com.github.walterfan.gtd.MESSAGE";
 	
-	private List<Map<String, ?>> _tasks = new ArrayList<Map<String, ?>>(10);
+	private List<Map<String, ?>> _taskList = new ArrayList<Map<String, ?>>(10);
 	private TaskListViewAdapter _adapter;
 	private ListView _taskListView;
 	
 	private static final String TAG = "MainActivity";
-	
-	private List<Map<String, ?>> _taskList;
+	//tasks from sqlite 
+	private List<Task> _tasks;
 	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Log.d(TAG, "onCreate...");
-   
+        
+        initTasks();
+
+        if(this._tasks == null) {
+        	this._tasks = new ArrayList<Task>(10);
+        }
+    }
+    
+    private void initTasks() {
         Map<String, Object> map = new HashMap<String, Object>();
 		map.put("isdone", false);
 		map.put("title", "Practice English");
 		map.put("priority", 0);
 		map.put("button", R.drawable.ic_content_edit);
-		_tasks.add(map);
+		_taskList.add(map);
 		
         ViewGroup sv = (ViewGroup)findViewById(R.id.task_list_panel);
         
         _taskListView = new ListView(this);
         //_taskListView.setId(View.generateViewId());
         sv.addView(_taskListView);
-        _adapter = new TaskListViewAdapter(this, _tasks, 
+        _adapter = new TaskListViewAdapter(this, _taskList, 
 				R.layout.task_item, 
 				new String[]{"isdone","title","priority", "button"}, 
 				new int[]{R.id.task_isdone, R.id.task_title, R.id.task_priority, R.id.task_button});
@@ -89,25 +98,6 @@ public class MainActivity extends Activity implements OnClickListener {
         testExit.setOnClickListener(this);*/
     }
     
-    private void initTask(View view) {
-    	ListView listView = (ListView)this.findViewById(R.id.task_list_view);
-		TaskListViewAdapter adapter = new TaskListViewAdapter(this, _taskList, 
-				R.layout.task_detail, 
-				new String[]{"isFinished","title","priority", "resource"}, 
-				new int[]{R.id.cb_task_finish, R.id.txt_task, R.id.list_task, R.id.btn_task_edit});
-		listView.setAdapter(adapter);
-		listView.setOnItemClickListener(new OnItemClickListener() {
-
-			@Override
-			public void onItemClick(AdapterView<?> parent, View view, int position,
-					long id) {
-				Toast.makeText(MainActivity.this, "select position=" + position, Toast.LENGTH_SHORT).show();
-				
-			}
-			
-		});
-    }
-    
 
 	public void addTask(final View view) {
 		//Intent intent = new Intent(this, DisplayMessageActivity.class);
@@ -128,8 +118,10 @@ public class MainActivity extends Activity implements OnClickListener {
 				map.put("title", message);
 				map.put("priority", 0);
 				map.put("button", R.drawable.ic_content_edit);
-				_tasks.add(map);
+				_taskList.add(map);
 
+				Task aTask = new Task(message);
+				MainActivity.this._tasks.add(aTask);
 				//_adapter.setData(_tasks);
 				_adapter.notifyDataSetChanged();
 				Log.d(TAG, "add task " + message + ", count=" +_adapter.getCount());			
