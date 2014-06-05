@@ -11,13 +11,13 @@ public interface ITaskDao {
 	
 	void close();
 	
-	int createTask(Task task);
+	Task createTask(Task task);
 	
 	int updateTask(Task task);
 	
-	int retrieveTask(int taskID);
+	Task retrieveTask(int taskID);
 	
-	int delTask(int taskID);
+	void deleteTask(int taskID);
 	
 	List<Task> getAllTasks();
 	

@@ -1,7 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
 
     <string name="app_name">GTD</string>
-
     <string name="task_name">Task Name</string>
     <string name="button_add">Add Task</string>
     <string name="button_del">Delete</string>
@@ -9,46 +9,59 @@
     <string name="button_test">Test</string>
     <string name="button_about">About</string>
     <string name="button_exit">Exit</string>
-    
     <string name="button_signin">Sign In</string>
     <string name="button_signup">Sign Up</string>
-    
     <string name="title_activity_display_message">Task Added</string>
     <string name="title_activity_tasks">Tasks</string>
     <string name="title_task">task</string>
-    
     <string name="task_icon">task</string>
     <string name="task_priority">task priority</string>
     <string name="task_action">Edit</string>
-    
     <string name="action_settings">setting</string>
     <string name="action_search">Task search</string>
-    
     <string name="action_start_sync">Start Data Sync</string>
     <string name="action_stop_sync">Stop Data Sync</string>
- 
     <string name="action_test">Test</string>
     <string name="action_signin">Sign In</string>
-    <string name="action_about">About</string> 
+    <string name="action_about">About</string>
     <string name="action_exit">Exit</string>
-    
     <string name="data_sync_service_started">Data sync service started</string>
     <string name="send">Send</string>
     <string name="stop">Stop</string>
-    
     <string name="dialog_prompt">Are you sure?</string>
     <string name="dialog_ok">Okay</string>
     <string name="dialog_cancel">Cancel</string>
-    
-    
-    
-     <string name="hello">Hello</string>
+    <string name="hello">Hello</string>
     <string name="login">Login</string>
     <string name="filledTextView"> * </string>
-	<string name="register">Register</string>
+    <string name="register">Register</string>
     <string name="strAccInputLabel">Username</string>
     <string name="strPswInputLabel">Password</string>
     <string name="strInputAccHint">input account</string>
     <string name="strPswInputHint">input password</string>
+    <string name="title_activity_task">TaskActivity</string>
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section3">Section 3</string>
+       
+    <string name="TaskDatabase_onCreate">"
+        CREATE TABLE wftask (
+			taskid INTEGER  PRIMARY KEY AUTOINCREMENT NOT NULL,
+			taskname VARCHAR(64)  UNIQUE NOT NULL,
+			priority VARCHAR(1)  NULL,
+			deadline TIMESTAMP DEFAULT CURRENT_TIMESTAMP NULL,
+			duration VARCHAR(3)  NULL,
+			finish BOOLEAN DEFAULT '''false''' NULL,
+			comments VARCHAR(256)  NULL,
+			createtime TIMESTAMP DEFAULT CURRENT_TIMESTAMP NULL,
+			lastmodifiedtime TIMESTAMP DEFAULT CURRENT_TIMESTAMP NULL);		
+	"</string>
+
+    <string name="TaskDatabase_onUpgrade">"
+    	drop table if exists wftask
+    "</string>
     
+    <string name="TaskTableColumns">"
+        taskid,taskname,priority,deadline,duration,finish,comments,createtime,lastmodifiedtime
+    "</string>
 </resources>

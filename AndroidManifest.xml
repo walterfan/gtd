@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.github.walterfan.gtd"
     android:versionCode="1"
@@ -7,17 +8,16 @@
         android:minSdkVersion="8"
         android:targetSdkVersion="19" />
 
-
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
-        android:label="@string/app_name"
-        >
+        android:label="@string/app_name" >
         <activity
             android:name="com.github.walterfan.gtd.MainActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -29,8 +29,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.github.walterfan.gtd.MainActivity" />
         </activity>
-        
-         <activity
+        <activity
             android:name="com.github.walterfan.gtd.ui.TasksActivity"
             android:label="@string/title_activity_tasks"
             android:parentActivityName="com.github.walterfan.gtd.ui.MainActivity" >
@@ -38,18 +37,43 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.github.walterfan.gtd.MainActivity" />
         </activity>
-        <service android:name="com.github.walterfan.gtd.service.DataSyncService" 
-            android:process=":remote">
+
+        <service
+            android:name="com.github.walterfan.gtd.service.DataSyncService"
+            android:process=":remote" >
             <intent-filter>
-                <action android:name="com.android.myAction"/>
+                <action android:name="com.android.myAction" />
             </intent-filter>
         </service>
-        <activity android:theme="@style/AppTheme" android:name=".test.TestActivity"></activity>
-        <activity android:theme="@style/AppTheme" android:name=".test.MediaPlayerTest"></activity>
-        <activity android:theme="@style/AppTheme" android:name=".test.SoundPoolTest"></activity>
-        <activity android:theme="@style/AppTheme" android:name=".test.ShapeTest"></activity>
-        <activity android:theme="@style/AppTheme" android:name=".test.DialogTest"></activity>
-        <activity android:theme="@style/AppTheme" android:name=".LoginActivity"></activity>
+
+        <activity
+            android:name="com.github.walterfan.gtd.test.TestActivity"
+            android:theme="@style/AppTheme" >
+        </activity>
+        <activity
+            android:name="com.github.walterfan.gtd.test.MediaPlayerTest"
+            android:theme="@style/AppTheme" >
+        </activity>
+        <activity
+            android:name="com.github.walterfan.gtd.test.SoundPoolTest"
+            android:theme="@style/AppTheme" >
+        </activity>
+        <activity
+            android:name="com.github.walterfan.gtd.test.ShapeTest"
+            android:theme="@style/AppTheme" >
+        </activity>
+        <activity
+            android:name="com.github.walterfan.gtd.test.DialogTest"
+            android:theme="@style/AppTheme" >
+        </activity>
+        <activity
+            android:name="com.github.walterfan.gtd.LoginActivity"
+            android:theme="@style/AppTheme" >
+        </activity>
+        <activity
+            android:name="com.github.walterfan.gtd.TaskActivity"
+            android:label="@string/title_activity_task" >
+        </activity>
     </application>
 
 </manifest>

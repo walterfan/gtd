@@ -24,6 +24,8 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.github.walterfan.gtd.dao.ITaskDao;
+import com.github.walterfan.gtd.dao.TaskDaoHelper;
 import com.github.walterfan.gtd.model.Task;
 import com.github.walterfan.gtd.service.DataSyncService;
 import com.github.walterfan.gtd.test.TestActivity;
@@ -37,8 +39,7 @@ public class MainActivity extends Activity implements OnClickListener {
 	private ListView _taskListView;
 	
 	private static final String TAG = "MainActivity";
-	//tasks from sqlite 
-	private List<Task> _tasks;
+	private ITaskDao _taskDao;
 	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,12 +49,23 @@ public class MainActivity extends Activity implements OnClickListener {
         
         initTasks();
 
-        if(this._tasks == null) {
-        	this._tasks = new ArrayList<Task>(10);
-        }
+        
     }
     
-    private void initTasks() {
+    
+    
+    @Override
+	protected void onStart() {
+		super.onStart();
+		
+		if(this._taskDao == null) {
+			this._taskDao = TaskDaoHelper.createTaskDao();
+		}
+ 	}
+
+
+
+	private void initTasks() {
         Map<String, Object> map = new HashMap<String, Object>();
 		map.put("isdone", false);
 		map.put("title", "Practice English");
@@ -121,7 +133,7 @@ public class MainActivity extends Activity implements OnClickListener {
 				_taskList.add(map);
 
 				Task aTask = new Task(message);
-				MainActivity.this._tasks.add(aTask);
+				_taskDao.createTask(aTask);
 				//_adapter.setData(_tasks);
 				_adapter.notifyDataSetChanged();
 				Log.d(TAG, "add task " + message + ", count=" +_adapter.getCount());			
@@ -184,8 +196,8 @@ public class MainActivity extends Activity implements OnClickListener {
 				Intent j = new Intent(this, LoginActivity.class);
 				startActivity(j);
 				break;
-			case R.id.action_about:
-				Toast.makeText(this, "Wrote by Walter Fan on 4/10/14", Toast.LENGTH_LONG).show();
+			case R.id.action_about:				
+				startActivity(new Intent(this, TaskActivity.class));
 				break;
 			case R.id.action_exit:
 				finish();
