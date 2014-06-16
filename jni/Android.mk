@@ -14,7 +14,9 @@ include $(CLEAR_VARS)
 LOCAL_C_INCLUDES += $(LOCAL_PATH)/util
 
 LOCAL_MODULE    := waltertest
-LOCAL_SRC_FILES := test/waltertest.cpp
+
+LOCAL_SRC_FILES := test/waltertest.cpp util/TinyServer.cpp util/TinyClient.cpp
+
 
 include $(BUILD_EXECUTABLE)
 #-------------------- msgbus.so -------------------------

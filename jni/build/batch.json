@@ -1,0 +1,6 @@
+{"steps": 
+[{"step":"ndk-build","desc":"build files"},
+{"step":"adb shell su -c \"mkdir /data/local/walter \"","desc":"create destination folder"},
+{"step":"adb push ../libs/armeabi-v7a/waltertest /data/local/walter","desc":"upload file"},
+]}
+
