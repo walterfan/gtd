@@ -23,7 +23,7 @@ public class TestActivity extends ListActivity {
 		
 		testCaseMap.put("MediaPlayerTest", "com.github.walterfan.gtd.test.MediaPlayerTest");
 		testCaseMap.put("SoundPoolTest",  "com.github.walterfan.gtd.test.SoundPoolTest");
-		testCaseMap.put("TaskActivity",  "com.github.walterfan.gtd.ui.TasksActivity");
+		//testCaseMap.put("TaskActivity",  "com.github.walterfan.gtd.ui.TasksActivity");
 		testCaseMap.put("SensorTest",  "com.github.walterfan.gtd.test.SensorTest");
 		testCaseMap.put("ShapeTest",  "com.github.walterfan.gtd.test.ShapeTest");
 		testCaseMap.put("DialogTest",  "com.github.walterfan.gtd.test.DialogTest");

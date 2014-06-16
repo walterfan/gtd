@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int main(int argc, char* argv[])
+int test(int argc, char* argv[])
 {
-     printf("-- WalterTest ---\n");
+     printf("-- Launch echo service ---\n");
      return 0;
 }

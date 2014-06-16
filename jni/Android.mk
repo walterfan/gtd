@@ -5,7 +5,7 @@ include $(CLEAR_VARS)
 LOCAL_C_INCLUDES += $(LOCAL_PATH)/util
 
 LOCAL_MODULE    := walterexam
-LOCAL_SRC_FILES := exam/echo_service.cpp
+LOCAL_SRC_FILES := exam/walterexam.cpp exam/echo_service.cpp
 
 include $(BUILD_EXECUTABLE)
 #-------------------- waltertest -------------------------
@@ -13,7 +13,7 @@ include $(CLEAR_VARS)
 
 LOCAL_C_INCLUDES += $(LOCAL_PATH)/util
 
-LOCAL_MODULE    := walter
+LOCAL_MODULE    := waltertest
 LOCAL_SRC_FILES := test/waltertest.cpp
 
 include $(BUILD_EXECUTABLE)

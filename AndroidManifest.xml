@@ -74,6 +74,10 @@
             android:name="com.github.walterfan.gtd.TaskActivity"
             android:label="@string/title_activity_task" >
         </activity>
+        <activity
+            android:name="com.github.walterfan.gtd.CommandActivity"
+            android:label="@string/title_activity_command" >
+        </activity>
     </application>
 
 </manifest>

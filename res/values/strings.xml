@@ -43,7 +43,6 @@
     <string name="title_section1">Section 1</string>
     <string name="title_section2">Section 2</string>
     <string name="title_section3">Section 3</string>
-       
     <string name="TaskDatabase_onCreate">"
         CREATE TABLE wftask (
 			taskid INTEGER  PRIMARY KEY AUTOINCREMENT NOT NULL,
@@ -56,12 +55,13 @@
 			createtime TIMESTAMP DEFAULT CURRENT_TIMESTAMP NULL,
 			lastmodifiedtime TIMESTAMP DEFAULT CURRENT_TIMESTAMP NULL);		
 	"</string>
-
     <string name="TaskDatabase_onUpgrade">"
     	drop table if exists wftask
     "</string>
-    
     <string name="TaskTableColumns">"
         taskid,taskname,priority,deadline,duration,finish,comments,createtime,lastmodifiedtime
     "</string>
+    <string name="title_activity_command">CommandActivity</string>
+    <string name="hello_world">Hello world!</string>
+
 </resources>
